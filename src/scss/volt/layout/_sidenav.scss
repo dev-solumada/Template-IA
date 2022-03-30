@@ -172,7 +172,8 @@
 	.accordion-button{
 		&::after {
 			background-image: none;
-			content: '\f054';
+			content: '>';
+			//content: '\f054' !important;
 			font-family: $font-awesome-5;
 			font-size: $font-size-sm;
 			font-weight: 900;

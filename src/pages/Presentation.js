@@ -80,26 +80,26 @@ export default () => {
   return (
     <>
       {/* <Navbar variant="dark" expand="lg" bg="dark" className="navbar-transparent navbar-theme-primary sticky-top">
-        <Container className="position-relative justify-content-between px-3">
-          <Navbar.Brand as={HashLink} to="#home" className="me-lg-3 d-flex align-items-center">
-            <Image src={ReactHero} />
-            <span className="ms-2 brand-text d-none d-md-inline">Volt React</span>
-          </Navbar.Brand>
+          <Container className="position-relative justify-content-between px-3">
+            <Navbar.Brand as={HashLink} to="#home" className="me-lg-3 d-flex align-items-center">
+              <Image src={ReactHero} />
+              <span className="ms-2 brand-text d-none d-md-inline">Volt React</span>
+            </Navbar.Brand>
 
-          <div className="d-flex align-items-center">
-            <Navbar.Collapse id="navbar-default-primary">
-              <Nav className="navbar-nav-hover align-items-lg-center">
-                <Nav.Link as={HashLink} to="#features">Features</Nav.Link>
-                <Nav.Link as={HashLink} to="#pages">Pages</Nav.Link>
-                <Nav.Link as={HashLink} to="#folder" className="d-sm-none d-xl-inline">Folder Structure</Nav.Link>
-                <Nav.Link as={HashLink} to="#getting-started">Getting Started</Nav.Link>
-                <Nav.Link as={HashLink} to="#download">Upgrade to Pro</Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-            <Button as={HashLink} to="#download" variant="outline-white" className="ms-3"><FontAwesomeIcon icon={faDownload} className="me-1" /> Download</Button>
-          </div>
-        </Container>
-      </Navbar> */}
+            <div className="d-flex align-items-center">
+              <Navbar.Collapse id="navbar-default-primary">
+                <Nav className="navbar-nav-hover align-items-lg-center">
+                  <Nav.Link as={HashLink} to="#features">Features</Nav.Link>
+                  <Nav.Link as={HashLink} to="#pages">Pages</Nav.Link>
+                  <Nav.Link as={HashLink} to="#folder" className="d-sm-none d-xl-inline">Folder Structure</Nav.Link>
+                  <Nav.Link as={HashLink} to="#getting-started">Getting Started</Nav.Link>
+                  <Nav.Link as={HashLink} to="#download">Upgrade to Pro</Nav.Link>
+                </Nav>
+              </Navbar.Collapse>
+              <Button as={HashLink} to="#download" variant="outline-white" className="ms-3"><FontAwesomeIcon icon={faDownload} className="me-1" /> Download</Button>
+            </div>
+          </Container>
+        </Navbar> */}
       <section className="section-header overflow-hidden pt-5 pt-lg-6 pb-9 pb-lg-12 bg-primary text-white" id="home">
         <Container>
           <Row>
