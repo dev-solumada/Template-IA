@@ -120,6 +120,18 @@ export default (props = {}) => {
                 <NavItem title="500 Server Error" link={Routes.ServerError.path} />
               </CollapsableNavItem>
 
+              {/** Client */}
+              <NavItem title="Client" icon={faBook} link={Routes.Client.path} />
+
+              {/** Documents */}
+              <NavItem title="Documents" icon={faBoxOpen} link={Routes.Document.path} />
+
+              {/** Client */}
+              <NavItem title="Project" icon={faRocket} link={Routes.Project.path} />
+              {/* <NavItem title="AddClient" icon={faCog} link={Routes.AddClient.path} />
+              <NavItem title="UpdateClient" icon={faCog} link={Routes.UpdateClient.path} />
+              <NavItem title="HistoryClient" icon={faCog} link={Routes.HistoryClient.path} /> */}
+
               {/* <NavItem external title="Plugins" link="https://demo.themesberg.com/volt-pro-react/#/plugins/datatable" target="_blank" badgeText="Pro" icon={faChartPie} /> */}
 
               <Dropdown.Divider className="my-3 border-indigo" />
