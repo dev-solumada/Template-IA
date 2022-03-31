@@ -17,7 +17,7 @@ export const Routes = {
     NotFound: { path: "/examples/404" },
     ServerError: { path: "/examples/500" },
 
-    //notre pages
+    // pages client - Document - Project
 
     //client
     Client: { path: "/client" },
@@ -31,7 +31,7 @@ export const Routes = {
     UpdateDocument: { path: "/document/update" },
     HistoryDocument: { path: "/document/history" },
 
-    //Projectn
+    //Project
     Project: { path: "/projet" },
     AddProject: { path: "/projet/add" },
     UpdateProject: { path: "/projet/update" },
