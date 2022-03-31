@@ -49,6 +49,24 @@ import Tabs from "./components/Tabs";
 import Tooltips from "./components/Tooltips";
 import Toasts from "./components/Toasts";
 
+
+//client - document - projets
+import Client from "./Clients/Client";
+import AddClient from "./Clients/AddClient";
+import UpdateClient from "./Clients/UpdateClient";
+import HistoryClient from "./Clients/HistoryClient";
+
+import Documents from "./Documents/Documents";
+import AddDocument from "./Documents/AddDocument";
+import UpdateDocument from "./Documents/UpdateDocument";
+import HistoryDocument from "./Documents/HistoryDocument";
+
+import Projets from "./Projets/Projets";
+import AddProject from "./Projets/AddProjet";
+import UpdateProject from "./Projets/UpdateProjet";
+import HistoryProject from "./Projets/HistoryProjet";
+
+
 const RouteWithLoader = ({ component: Component, ...rest }) => {
   const [loaded, setLoaded] = useState(false);
 
@@ -58,7 +76,7 @@ const RouteWithLoader = ({ component: Component, ...rest }) => {
   }, []);
 
   return (
-    <Route {...rest} render={props => ( <> <Preloader show={loaded ? false : true} /> <Component {...props} /> </> ) } />
+    <Route {...rest} render={props => (<> <Preloader show={loaded ? false : true} /> <Component {...props} /> </>)} />
   );
 };
 
@@ -142,6 +160,25 @@ export default () => (
     <RouteWithSidebar exact path={Routes.DocsFolderStructure.path} component={DocsFolderStructure} />
     <RouteWithSidebar exact path={Routes.DocsBuild.path} component={DocsBuild} />
     <RouteWithSidebar exact path={Routes.DocsChangelog.path} component={DocsChangelog} />
+
+
+    {/* clients */}
+    <RouteWithSidebar exact path={Routes.Client.path} component={Client} />
+    <RouteWithSidebar exact path={Routes.AddClient.path} component={AddClient} />
+    <RouteWithSidebar exact path={Routes.UpdateClient.path} component={UpdateClient} />
+    <RouteWithSidebar exact path={Routes.HistoryClient.path} component={HistoryClient} />
+
+    {/* documents */}
+    <RouteWithSidebar exact path={Routes.Document.path} component={Documents} />
+    <RouteWithSidebar exact path={Routes.AddDocument.path} component={AddDocument} />
+    <RouteWithSidebar exact path={Routes.UpdateDocument.path} component={UpdateDocument} />
+    <RouteWithSidebar exact path={Routes.HistoryDocument.path} component={HistoryDocument} />
+
+    {/* projet */}
+    <RouteWithSidebar exact path={Routes.Project.path} component={Projets} />
+    <RouteWithSidebar exact path={Routes.AddProject.path} component={AddProject} />
+    <RouteWithSidebar exact path={Routes.UpdateProject.path} component={UpdateProject} />
+    <RouteWithSidebar exact path={Routes.HistoryProject.path} component={HistoryProject} />
 
     <Redirect to={Routes.NotFound.path} />
   </Switch>

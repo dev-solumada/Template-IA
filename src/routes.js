@@ -17,6 +17,27 @@ export const Routes = {
     NotFound: { path: "/examples/404" },
     ServerError: { path: "/examples/500" },
 
+    //notre pages
+
+    //client
+    Client: { path: "/client" },
+    AddClient: { path: "/client/add" },
+    UpdateClient: { path: "/client/update" },
+    HistoryClient: { path: "/client/history" },
+
+    //Document
+    Document: { path: "/document" },
+    AddDocument: { path: "/document/add" },
+    UpdateDocument: { path: "/document/update" },
+    HistoryDocument: { path: "/document/history" },
+
+    //Projectn
+    Project: { path: "/projet" },
+    AddProject: { path: "/projet/add" },
+    UpdateProject: { path: "/projet/update" },
+    HistoryProject: { path: "/projet/history" },
+
+
     // docs
     DocsOverview: { path: "/documentation/overview" },
     DocsDownload: { path: "/documentation/download" },
