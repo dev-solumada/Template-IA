@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 
 import { Routes } from "../routes";
 import { pageVisits, pageTraffic, pageRanking } from "../data/tables";
+import {projectList} from "../data/projets"
 import transactions from "../data/transactions";
 import commands from "../data/commands";
 
@@ -27,33 +28,33 @@ const ValueChange = ({ value, suffix }) => {
 
 export const ProjectTable = () => {
   const TableRow = (props) => {
-    const { country, countryImage, overallRank, overallRankChange, travelRank, travelRankChange, widgetsRank, widgetsRankChange } = props;
-
+    //const { country, countryImage, overallRank, overallRankChange, travelRank, travelRankChange, widgetsRank, widgetsRankChange } = props;
+    const {selected,client,name,created_at,updated_at,client_id,document_id} = props;
     return (
       <tr>
-        <td className="border-0">
+        {/* {<td className="border-0">
           <Card.Link href="#" className="d-flex align-items-center">
             <Image src={countryImage} className="image-small rounded-circle me-2" />
             <div><span className="h6">{country}</span></div>
           </Card.Link>
-        </td>
+        </td>} */}
         <td className="fw-bold border-0">
-          {overallRank ? overallRank : "-"}
+          {selected ? selected : "-"}
         </td>
         <td className="border-0">
-          <ValueChange value={overallRankChange} />
+          <ValueChange value={client} />
         </td>
         <td className="fw-bold border-0">
-          {travelRank ? travelRank : "-"}
+          {name ? name : "-"}
         </td>
         <td className="border-0">
-          <ValueChange value={travelRankChange} />
+          <ValueChange value={created_at} />
         </td>
         <td className="fw-bold border-0">
-          {widgetsRank ? widgetsRank : "-"}
+          {updated_at ? updated_at : "-"}
         </td>
         <td className="border-0">
-          <ValueChange value={widgetsRankChange} />
+          <ValueChange value={client_id} />
         </td>
       </tr>
     );
@@ -65,17 +66,18 @@ export const ProjectTable = () => {
         <Table responsive className="table-centered table-nowrap rounded mb-0">
           <thead className="thead-light">
             <tr>
-              <th className="border-0">Country</th>
-              <th className="border-0">All</th>
-              <th className="border-0">All Change</th>
-              <th className="border-0">Travel & Local</th>
-              <th className="border-0">Travel & Local Change</th>
-              <th className="border-0">Widgets</th>
-              <th className="border-0">Widgets Change</th>
+              <th className="border-0">Selection</th>
+              <th className="border-0">Client</th>
+              <th className="border-0">Name</th>
+              <th className="border-0">Created at</th>
+              <th className="border-0">Updated at</th>
+              <th className="border-0">Show project</th>
+              <th className="border-0">~</th>
             </tr>
           </thead>
           <tbody>
-            {pageRanking.map(r => <TableRow key={`ranking-${r.id}`} {...r} />)}
+            {/*{pageRanking.map(r => <TableRow key={`ranking-${r.id}`} {...r} />)}*/}
+            {projectList.map(r => <TableRow key={`ranking-${r.id}`} {...r} />)}
           </tbody>
         </Table>
       </Card.Body>
