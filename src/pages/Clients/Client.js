@@ -35,7 +35,7 @@ const Client = () => {
             <TableClient />
             <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
                 <Dropdown>
-                    <Dropdown.Toggle as={Button} variant="secondary" className="text-dark me-2" href="/volt-react-dashboard#/document/add">
+                    <Dropdown.Toggle as={Button} variant="secondary" className="text-dark me-2"> {/*/href="/volt-react-dashboard#/document/add">*/}
                         <FontAwesomeIcon icon={faPlus} className="me-2" />
                         <span>Add Client</span>
                     </Dropdown.Toggle>
