@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faBoxOpen, faCartArrowDown, faChartPie, faChevronDown, faClipboard, faCommentDots, faFileAlt, faPlus, faRocket, faStore } from '@fortawesome/free-solid-svg-icons';
-import { Col, Row, Button, Dropdown, Form, ButtonGroup, Breadcrumb, InputGroup } from '@themesberg/react-bootstrap';
+import { Col, Row, Button, Container, Dropdown, Form, ButtonGroup, Breadcrumb, InputGroup } from '@themesberg/react-bootstrap';
 import { ChoosePhotoWidget, ProfileCardWidget } from "../../components/Widgets";
 import { AddDocument } from "../../components/Form-AddDocument";
 
@@ -19,25 +19,11 @@ export default () => {
                     <h4>Add document</h4>
                 </div>
             </div>
-            <Row>
-                <Col xs={12} xl={8}>
-                    <AddDocument />
-                </Col>
 
-                {/* <Col xs={12} xl={4}>
-                    <Row>
-                        <Col xs={12}>
-                            <ProfileCardWidget />
-                        </Col>
-                        <Col xs={12}>
-                            <ChoosePhotoWidget
-                                title="Select profile photo"
-                                photo={Profile3}
-                            />
-                        </Col>
-                    </Row>
-                </Col> */}
-            </Row>
+            <Container className="px-0">
+                <AddDocument />
+            </Container>
+
         </>
     );
 };
