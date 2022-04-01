@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faAngleUp, faArrowDown, faArrowUp, faEdit, faEllipsisH, faExternalLinkAlt, faEye, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { faCircle, faAngleDown, faAngleUp, faArrowDown, faArrowUp, faEdit, faEllipsisH, faExternalLinkAlt, faEye, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { Col, Row, Nav, Card, Image, Button, Table, Dropdown, ProgressBar, Pagination, ButtonGroup } from '@themesberg/react-bootstrap';
 import { Link } from 'react-router-dom';
 
@@ -12,31 +12,24 @@ export const RecentAction = () => {
     const totalTransactions = transactions.length;
 
     const TableRow = (props) => {
-        const { invoiceNumber, subscription, price, issueDate, dueDate, status } = props;
-        const statusVariant = status === "Paid" ? "success"
-            : status === "Due" ? "warning"
-                : status === "Canceled" ? "danger" : "primary";
+        const { action, item, projectName } = props;
 
         return (
             <tr>
                 <td>
-                    <Card.Link as={Link} to={Routes.Invoice.path} className="fw-normal">
-                        {invoiceNumber}
-                    </Card.Link>
-                </td>
-                <td>
-                    <span className="fw-normal">
-                        {subscription}
-                    </span>
-                </td>
-                <td>
-                    <span className={`fw-normal text-${statusVariant}`}>
-                        {status}
+                    <span className="fw-normal">{action}
+                        {/* <FontAwesomeIcon icon={faAngleDown} /> */}
+                        {/* <FontAwesomeIcon icon="faCircle" /> */}
                     </span>
                 </td>
                 <td>
                     <span className="fw-normal">
-                        {dueDate}
+                        {item}
+                    </span>
+                </td>
+                <td>
+                    <span className={`fw-normal`}>
+                        {projectName}
                     </span>
                 </td>
                 {/* <td>
