@@ -42,7 +42,11 @@ export const TableClient = () => {
                 </td>
                 <td>
                     <span className="fw-normal">
-                        {showClientProject}
+                        <Dropdown>
+                            <Dropdown.Toggle as={Button} variant="secondary" className="text-dark me-2"> {/*/href="/volt-react-dashboard#/document/add">*/}
+                                <span>Show Project</span>
+                            </Dropdown.Toggle>
+                        </Dropdown>
                     </span>
                 </td>
             </tr>
