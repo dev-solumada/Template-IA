@@ -4,13 +4,14 @@ import SimpleBar from 'simplebar-react';
 import { useLocation } from "react-router-dom";
 import { CSSTransition } from 'react-transition-group';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook, faBoxOpen, faChartPie, faCog, faFileAlt, faHandHoldingUsd, faSignOutAlt, faTable, faTimes, faCalendarAlt, faMapPin, faInbox, faRocket } from "@fortawesome/free-solid-svg-icons";
+import { faBook,faFlag,faHouseUser, faChartPie, faCog, faFileAlt, faHandHoldingUsd, faSignOutAlt, faTable, faTimes, faCalendarAlt, faMapPin, faInbox, faRocket } from "@fortawesome/free-solid-svg-icons";
 import { Nav, Badge, Image, Button, Dropdown, Accordion, Navbar } from '@themesberg/react-bootstrap';
 import { Link } from 'react-router-dom';
 
 import { Routes } from "../routes";
 import ThemesbergLogo from "../assets/img/themesberg.svg";
 import ReactHero from "../assets/img/technologies/react-hero-logo.svg";
+import logoTuring from "../assets/img/favicon/logo_turing_solution.png"
 import ProfilePicture from "../assets/img/team/profile-picture-3.jpg";
 
 export default (props = {}) => {
@@ -71,7 +72,7 @@ export default (props = {}) => {
     <>
       <Navbar expand={false} collapseOnSelect variant="dark" className="navbar-theme-primary px-4 d-md-none">
         <Navbar.Brand className="me-lg-5" as={Link} to={Routes.DashboardOverview.path}>
-          <Image src={ReactHero} className="navbar-brand-light" />
+          <Image src={logoTuring} className="navbar-brand-light" />
         </Navbar.Brand>
         <Navbar.Toggle as={Button} aria-controls="main-navbar" onClick={onCollapse}>
           <span className="navbar-toggler-icon" />
@@ -97,7 +98,7 @@ export default (props = {}) => {
               </Nav.Link>
             </div>
             <Nav className="flex-column pt-3 pt-md-0">
-              <NavItem title="Optimum Solution" link={Routes.Presentation.path} image={ReactHero} />
+              <NavItem title="Optimum Solution" link={Routes.Presentation.path} image={logoTuring} />
 
               <NavItem title="Account" link={Routes.DashboardOverview.path} icon={faChartPie} />
               {/* <NavItem title="Overview" link={Routes.DashboardOverview.path} icon={faChartPie} /> */}
@@ -122,13 +123,13 @@ export default (props = {}) => {
               </CollapsableNavItem>
 
               {/** Client */}
-              <NavItem title="Client" icon={faBook} link={Routes.Client.path} />
+              <NavItem title="Client" icon={faHouseUser} link={Routes.Client.path} />
 
               {/** Documents */}
-              <NavItem title="Documents" icon={faBoxOpen} link={Routes.Document.path} />
+              <NavItem title="Documents" icon={faBook} link={Routes.Document.path} />
 
               {/** Client */}
-              <NavItem title="Project" icon={faRocket} link={Routes.Project.path} />
+              <NavItem title="Project" icon={faFlag} link={Routes.Project.path} />
               {/* <NavItem title="AddClient" icon={faCog} link={Routes.AddClient.path} />
               <NavItem title="UpdateClient" icon={faCog} link={Routes.UpdateClient.path} />
               <NavItem title="HistoryClient" icon={faCog} link={Routes.HistoryClient.path} /> */}
