@@ -33,11 +33,19 @@ export default () => {
                 </Row>
             </div>
 
-            <Dropdown.Toggle as={Button} variant="secondary" className="text-dark me-2">
-                <FontAwesomeIcon icon={faPlus} className="me-2" />
-                <span>New</span>
-            </Dropdown.Toggle>
             <TableDocument />
+            <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
+                <Dropdown>
+                    <Dropdown.Toggle as={Button} variant="secondary" className="text-dark me-2" href="/volt-react-dashboard#/document/add">
+                        <FontAwesomeIcon icon={faPlus} className="me-2" />
+                        <span>Add Document</span>
+                    </Dropdown.Toggle>
+                    {/* <Dropdown.Toggle as={Button} variant="secondary" className="text-dark me-2">
+                        <FontAwesomeIcon icon={faPlus} className="me-2" />
+                        <span>New</span>
+                    </Dropdown.Toggle> */}
+                </Dropdown>
+            </div>
         </>
     );
 };

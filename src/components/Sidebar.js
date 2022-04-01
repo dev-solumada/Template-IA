@@ -82,9 +82,9 @@ export default (props = {}) => {
           <div className="sidebar-inner px-4 pt-3">
             <div className="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
               <div className="d-flex align-items-center">
-                <div className="user-avatar lg-avatar me-4">
+                {/* <div className="user-avatar lg-avatar me-4">
                   <Image src={ProfilePicture} className="card-img-top rounded-circle border-white" />
-                </div>
+                </div> */}
                 <div className="d-block">
                   <h6>Hi, Jane</h6>
                   <Button as={Link} variant="secondary" size="xs" to={Routes.Signin.path} className="text-dark">
@@ -97,9 +97,10 @@ export default (props = {}) => {
               </Nav.Link>
             </div>
             <Nav className="flex-column pt-3 pt-md-0">
-              <NavItem title="Volt React" link={Routes.Presentation.path} image={ReactHero} />
+              <NavItem title="Optimum Solution" link={Routes.Presentation.path} image={ReactHero} />
 
-              <NavItem title="Overview" link={Routes.DashboardOverview.path} icon={faChartPie} />
+              <NavItem title="Account" link={Routes.DashboardOverview.path} icon={faChartPie} />
+              {/* <NavItem title="Overview" link={Routes.DashboardOverview.path} icon={faChartPie} /> */}
               {/* <NavItem external title="Messages" link="https://demo.themesberg.com/volt-pro-react/#/messages" target="_blank" badgeText="Pro" icon={faInbox} /> */}
               <NavItem title="Transactions" icon={faHandHoldingUsd} link={Routes.Transactions.path} />
               <NavItem title="Settings" icon={faCog} link={Routes.Settings.path} />
