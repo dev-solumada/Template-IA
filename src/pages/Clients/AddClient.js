@@ -4,7 +4,7 @@ import { faSave } from "@fortawesome/free-solid-svg-icons";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { Breadcrumb } from '@themesberg/react-bootstrap';
 import { Button } from "@themesberg/react-bootstrap";
-
+import { Link } from "react-router-dom";
 
 
 const AddClient = () => {
@@ -13,8 +13,14 @@ const AddClient = () => {
             <div className="d-xl-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
                 <div className="d-block mb-4 mb-xl-0">
                     <Breadcrumb className="d-none d-md-inline-block" listProps={{ className: "breadcrumb-dark breadcrumb-transparent" }}>
-                        <Breadcrumb.Item><FontAwesomeIcon icon={faHome} /></Breadcrumb.Item>
-                        <Breadcrumb.Item>Client</Breadcrumb.Item>
+                        <Breadcrumb.Item>
+                            <Link to="/dashboard/overview">
+                                <FontAwesomeIcon icon={faHome} />
+                            </Link>
+                        </Breadcrumb.Item>
+                        <Breadcrumb.Item>
+                            <Link to="/client">Client</Link>
+                        </Breadcrumb.Item>
                         <Breadcrumb.Item active>Add</Breadcrumb.Item>
                     </Breadcrumb>
                 </div>
@@ -80,12 +86,12 @@ const AddClient = () => {
                         <div className="form-group">
                             <div className="row">
                                 <div class="mb-3 mx-auto row d-fex d-flex-inline justify-content-around">
-                                    <div className="col-5 ml-2">
+                                    <div className="col-5 col-sm-5 col-md-5 col-xl-5 ml-2">
                                         <div className="row d-flex justify-content-center">
                                             <Button variant="secondary">Save And Add Another</Button>
                                         </div>
                                     </div>
-                                    <div className="col-5">
+                                    <div className="col-5 col-sm-5 col-md-5 col-xl-5">
                                         <div className="row d-flex justify-content-center">
                                             <Button variant="secondary">Save And continue Editing</Button>
                                         </div>

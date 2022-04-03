@@ -42,7 +42,9 @@ export const TableClient = () => {
                 </td>
                 <td>
                     <span className="fw-normal">
-                        {showClientProject}
+                        <Link to="/">
+                            <Button variant="secondary" className="btn btn-sm">Show Project</Button>
+                        </Link>
                     </span>
                 </td>
             </tr>
