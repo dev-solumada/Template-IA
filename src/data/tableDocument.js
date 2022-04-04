@@ -1,7 +1,8 @@
 
 export default [
     {
-        "invoiceNumber": 300500,
+        "id": 1,
+        // "selected": false,
         "client": "Mathieu",
         "projet": "Impression",
         "name": "table",
@@ -14,7 +15,7 @@ export default [
         "inspect": "-"
     },
     {
-        "invoiceNumber": 300500,
+        "id": 2,
         "client": "Clara",
         "projet": "Impression",
         "name": "My Document",
@@ -27,7 +28,7 @@ export default [
         "inspect": "-"
     },
     {
-        "invoiceNumber": 300500,
+        "id": 3,
         "client": "Mark",
         "projet": "Impression",
         "name": "test",
