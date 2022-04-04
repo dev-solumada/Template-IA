@@ -1,8 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faPlus } from "@fortawesome/free-solid-svg-icons";
-import { Button, Breadcrumb} from '@themesberg/react-bootstrap';
-import { Link } from "react-router-dom";
+import { Button, Breadcrumb, Dropdown } from '@themesberg/react-bootstrap';
+// import { Link } from "react-router-dom";
 
 //import { ProjectTable } from "../../components/Tables_c";
 import { TableProjet } from "../../components/TableProjet";
@@ -26,13 +26,13 @@ const Projet = () => {
       {/*<ProjectTable />*/}
       <TableProjet/>
       <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
-            <Link to="/projet/add">
-                <Button variant="primary">
-                    <FontAwesomeIcon icon={faPlus} />
-                    <span> Add Project</span>
-                </Button>
-            </Link>
-      </div>
+                <Dropdown>
+                    <Dropdown.Toggle as={Button} variant="secondary" className="text-dark me-2" href="/volt-react-dashboard#/projet/add">
+                        <FontAwesomeIcon icon={faPlus} className="me-2" />
+                        <span>Add Project</span>
+                    </Dropdown.Toggle>
+                </Dropdown>
+            </div>
     </>
   );
 };
