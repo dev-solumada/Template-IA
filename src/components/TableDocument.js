@@ -53,20 +53,8 @@ export const TableDocument = () => {
         return (
             <tr>
                 <td>
-                    {/* <input
-                    type="checkbox"
-                    onChange={e => {
-                        let checked = e.target.checked;
-                        setStudentState(
-                            studentState.map(d => {
-                                d.select = checked;
-                                return d;
-                            })
-                        );
-                    }}
-                ></input> */}
                     {/* <Card.Link as={Link} to={Routes.Invoice.path} className="fw-normal"> */}
-                    <input type="checkbox" checked={select} />
+                    <input type="checkbox" />
                     {/* </Card.Link> */}
                 </td>
                 <td>
