@@ -1,25 +1,23 @@
 
-import moment from "moment-timezone";
-
 export default [
     {
-        "invoiceNumber": 300500,
-        "status": "Document",
-        "subscription": "Project launch"
+        "action": "add",
+        "item": "Document",
+        "projectName": "Project launch"
     },
     {
-        "invoiceNumber": 300499,
-        "status": "User",
-        "subscription": "Admin Changed"
+        "action": "update",
+        "item": "User",
+        "projectName": "Admin Changed"
     },
     {
-        "invoiceNumber": 300498,
-        "status": "Document",
-        "subscription": "Document droped"
+        "action": "delete",
+        "item": "Document",
+        "projectName": "Document droped"
     },
     {
-        "invoiceNumber": 300497,
-        "status": "Document",
-        "subscription": "Project launch"
+        "action": "add",
+        "item": "Document",
+        "projectName": "Project launch"
     }
 ]
