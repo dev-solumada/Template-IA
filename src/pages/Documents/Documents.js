@@ -42,10 +42,10 @@ export default () => {
                         <span>Add Document</span>
                     </Dropdown.Toggle>
                 </Dropdown> */}
-                <Link to="/volt-react-dashboard#/document/add">
+                <Link to="/document/add">
                     <Button variant="primary">
                         <FontAwesomeIcon icon={faPlus} />
-                        <span> Add Client</span>
+                        <span> Add Document</span>
                     </Button>
                 </Link>
             </div>
