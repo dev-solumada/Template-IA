@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleUp, faArrowDown, faArrowUp, faEdit, faEllipsisH, faExternalLinkAlt, faEye, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { Col, Row, Nav, Card, Image, Button, Table, Dropdown, ProgressBar, Pagination, ButtonGroup } from '@themesberg/react-bootstrap';
@@ -12,16 +12,29 @@ export const TableDocument = () => {
     const totalTransactions = documents.length;
 
     const TableRow = (props) => {
-        const { invoiceNumber, client, projet, name, path, status, data, type, treated, accuracy, inspect } = props;
-        const statusVariant = status === "Paid" ? "success"
-            : status === "Due" ? "warning"
-                : status === "Canceled" ? "danger" : "primary";
+        const { select = false, id, client, projet, name, path, status, data, type, treated, accuracy, inspect } = props;
+        // const statusVariant = status === "Paid" ? "success"
+        //     : status === "Due" ? "warning"
+        //         : status === "Canceled" ? "danger" : "primary";   setStudentState(
+
+        const [checked, setChecked] = React.useState(false);
+
+        const handleChange = () => {
+            setChecked(!checked);
+        };
+
+        console.log("pppp=== ", props);
+        console.log("handleChange=== ", checked);
 
         return (
             <tr>
                 <td>
                     {/* <Card.Link as={Link} to={Routes.Invoice.path} className="fw-normal"> */}
-                    {invoiceNumber}
+                    <input
+                        type="checkbox"
+                        checked={checked}
+                        onChange={handleChange}
+                    />
                     {/* </Card.Link> */}
                 </td>
                 <td>
@@ -30,7 +43,7 @@ export const TableDocument = () => {
                     </span>
                 </td>
                 <td>
-                    <span className={`fw-normal text-${statusVariant}`}>
+                    <span className={`fw-normal`}>
                         {projet}
                     </span>
                 </td>
@@ -45,7 +58,7 @@ export const TableDocument = () => {
                     </span>
                 </td>
                 <td>
-                    <span className={`fw-normal text-${statusVariant}`}>
+                    <span className={`fw-normal`}>
                         {status}
                     </span>
                 </td>
@@ -60,7 +73,7 @@ export const TableDocument = () => {
                     </span>
                 </td>
                 <td>
-                    <span className={`fw-normal text-${statusVariant}`}>
+                    <span className={`fw-normal`}>
                         {treated}
                     </span>
                 </td>
@@ -84,7 +97,13 @@ export const TableDocument = () => {
                 <Table hover className="user-table align-items-center">
                     <thead>
                         <tr>
-                            <th className="border-bottom">NUM</th>
+                            <th className="border-bottom">
+                                <input
+                                    type="checkbox"
+                                // checked={checked}
+                                // onChange={allChange}
+                                />
+                            </th>
                             <th className="border-bottom">CLIENT</th>
                             <th className="border-bottom">PROJET</th>
                             <th className="border-bottom">NAME</th>
@@ -98,7 +117,7 @@ export const TableDocument = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {documents.map(t => <TableRow key={`transaction-${t.invoiceNumber}`} {...t} />)}
+                        {documents.map(t => <TableRow key={`transaction-${t.id}`} {...t} />)}
                     </tbody>
                 </Table>
             </Card.Body>
