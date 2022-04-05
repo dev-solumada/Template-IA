@@ -6,37 +6,138 @@ import { Link } from 'react-router-dom';
 
 import { Routes } from "../routes";
 import documents from "../data/tableDocument";
+import Catalogues from "../data/mock";
 
 
 export const TableDocument = () => {
-    const totalTransactions = documents.length;
+    // const totalTransactions = documents.length;
 
-    const TableRow = (props) => {
-        const { select = false, id, client, projet, name, path, status, data, type, treated, accuracy, inspect } = props;
-        // const statusVariant = status === "Paid" ? "success"
-        //     : status === "Due" ? "warning"
-        //         : status === "Canceled" ? "danger" : "primary";   setStudentState(
+    const [isCheckAll, setIsCheckAll] = useState(false);
+    const [isCheck, setIsCheck] = useState([]);
+    const [list, setList] = useState([]);
 
-        const [checked, setChecked] = React.useState(false);
+    useEffect(() => {
+        setList(documents);
+    }, [list]);
 
-        const handleChange = () => {
-            setChecked(!checked);
-        };
+    const handleSelectAll = e => {
+        setIsCheckAll(!isCheckAll);
+        setIsCheck(list.map(li => li.id));
+        if (isCheckAll) {
+            setIsCheck([]);
+        }
+    };
 
-        console.log("pppp=== ", props);
-        console.log("handleChange=== ", checked);
+    console.log("list ==== ", list)
+    const handleClick = e => {
+        const { id, checked } = e.target;
+        setIsCheck([...isCheck, id]);
+        if (!checked) {
+            setIsCheck(isCheck.filter(item => item !== id));
+        }
+    };
 
+    console.log("isCheck ==== ", isCheck);
+
+    console.log("isCheckAll ==== ", isCheckAll);
+
+    // const TableRow = (props) => {
+    //     const { isChecked = false, id, client, projet, name, path, status, data, type, treated, accuracy, inspect } = props;
+
+    //     // const [checked, setChecked] = React.useState(false);
+
+    //     // const handleChange = () => {
+    //     //     setChecked(!checked);
+    //     // };
+
+    //     // console.log("pppp=== ", props);
+    //     // console.log("handleChange=== ", checked);
+
+    //     return (
+    //         <tr>
+    //             <td>
+
+    //                 <input
+    //                     key={id}
+    //                     type="checkbox"
+    //                     name={name}
+    //                     id={id}
+    //                     handleClick={handleClick}
+    //                     isChecked={isCheck.includes(id)}
+    //                 />
+    //                 {/* <input
+    //                     // key={id} type="checkbox" name={name} value={name} checked={isChecked} onChange={handleChange}
+    //                     checked={checked}
+    //                     type="checkbox"
+    //                     onChange={handleChange}
+    //                 /> */}
+    //             </td>
+    //             <td>
+    //                 <span className="fw-normal">
+    //                     {client}
+    //                 </span>
+    //             </td>
+    //             <td>
+    //                 <span className={`fw-normal`}>
+    //                     {projet}
+    //                 </span>
+    //             </td>
+    //             <td>
+    //                 <span className="fw-normal">
+    //                     {name}
+    //                 </span>
+    //             </td>
+    //             <td>
+    //                 <span className="fw-normal">
+    //                     {path}
+    //                 </span>
+    //             </td>
+    //             <td>
+    //                 <span className={`fw-normal`}>
+    //                     {status}
+    //                 </span>
+    //             </td>
+    //             <td>
+    //                 <span className="fw-normal">
+    //                     {data}
+    //                 </span>
+    //             </td>
+    //             <td>
+    //                 <span className="fw-normal">
+    //                     {type}
+    //                 </span>
+    //             </td>
+    //             <td>
+    //                 <span className={`fw-normal`}>
+    //                     {treated}
+    //                 </span>
+    //             </td>
+    //             <td>
+    //                 <span className="fw-normal">
+    //                     {accuracy}
+    //                 </span>
+    //             </td>
+    //             <td>
+    //                 <span className="fw-normal">
+    //                     {inspect}
+    //                 </span>
+    //             </td>
+    //         </tr>
+    //     );
+    // };
+
+    const catalog = list.map(({ id, client, projet, name, path, status, data, type, treated, accuracy, inspect }) => {
         return (
             <tr>
                 <td>
-                    {/* <Card.Link as={Link} to={Routes.Invoice.path} className="fw-normal"> */}
                     <input
+                        onChange={handleClick}
+                        key={id}
                         type="checkbox"
-                        checked={checked}
-                        onChange={handleChange}
-                    />
-                    {/* </Card.Link> */}
-                </td>
+                        name={name}
+                        id={id}
+                        checked={isCheck.includes(id)}
+                    /></td>
                 <td>
                     <span className="fw-normal">
                         {client}
@@ -89,8 +190,7 @@ export const TableDocument = () => {
                 </td>
             </tr>
         );
-    };
-
+    });
     return (
         <Card border="light" className="table-wrapper table-responsive shadow-sm">
             <Card.Body className="pt-0">
@@ -100,7 +200,8 @@ export const TableDocument = () => {
                             <th className="border-bottom">
                                 <input
                                     type="checkbox"
-                                // checked={checked}
+                                    onChange={handleSelectAll}
+                                    checked={isCheckAll}
                                 // onChange={allChange}
                                 />
                             </th>
@@ -117,7 +218,8 @@ export const TableDocument = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {documents.map(t => <TableRow key={`transaction-${t.id}`} {...t} />)}
+                        {catalog}
+                        {/* {documents.map(t => <TableRow key={`transaction-${t.id}`} {...t} />)} */}
                     </tbody>
                 </Table>
             </Card.Body>
