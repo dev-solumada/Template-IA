@@ -20,19 +20,6 @@ export default () => {
                 </div>
             </div>
 
-            <div className="table-settings mb-4">
-                <Row className="justify-content-between align-items-center">
-                    <Col xs={8} md={6} lg={3} xl={4}>
-                        <InputGroup>
-                            <InputGroup.Text>
-                                <FontAwesomeIcon icon={faSearch} />
-                            </InputGroup.Text>
-                            <Form.Control type="text" placeholder="Search" />
-                        </InputGroup>
-                    </Col>
-                </Row>
-            </div>
-
             <TableDocument />
             <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
                 <Dropdown>
