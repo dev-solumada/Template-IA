@@ -1,6 +1,6 @@
 export default [
     {
-        id : 0,
+        "id" : 0,
         "selected" : false,
         "client" : "Mathieu",
         "name" :"Personnalisation",
@@ -10,7 +10,7 @@ export default [
         "document_id" : "123456789"
     },
     {
-        id : 1,
+        "id" : 1,
         "selected" : false,
         "client" : "Clara",
         "name" :"Impression",
