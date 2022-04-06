@@ -10,6 +10,7 @@ import documents from "../data/tableDocument";
 export const TableDocument = () => {
     // const totalTransactions = documents.length;
 
+
     const [isCheckAll, setIsCheckAll] = useState(false);
     const [isCheck, setIsCheck] = useState([]);
     const [list, setList] = useState([]);
@@ -37,6 +38,102 @@ export const TableDocument = () => {
     console.log("isCheck ==== ", isCheck);
     console.log("isCheckAll ==== ", isCheckAll);
 
+    // const TableRow = (props) => {
+    //     const { isChecked = false, id, client, projet, name, path, status, data, type, treated, accuracy, inspect } = props;
+
+    //     this.state = {
+    //         allChecked: false,
+    //         list: [
+    //            props
+    //         ],
+    //     };
+
+    //     // const [checked, setChecked] = React.useState(false);
+
+    //     // const handleChange = () => {
+    //     //     setChecked(!checked);
+    //     // };
+
+    //     // console.log("pppp=== ", props);
+    //     // console.log("handleChange=== ", checked);
+
+    //     handleChange = (e) => {
+    //         let list = this.state.list;
+    //         let allChecked = this.state.allChecked;
+    //         if (e.target.value === "checkAll") {
+    //             list.forEach(item => {
+    //                 item.isChecked = e.target.checked;
+    //                 allChecked = e.target.checked;
+    //             });
+    //         }
+    //         else {
+    //             list.find(item => item.name === e.target.name).isChecked = e.target.checked;
+    //         }
+    //         this.setState({ list: list, allChecked: allChecked });
+    //     }
+    //     return (
+    //         <tr>
+    //             <td>
+    //                 <input
+    //                     type="checkbox"
+    //                 // checked={checked}
+    //                 // onChange={handleChange}
+    //                 />
+    //             </td>
+    //             <td>
+    //                 <span className="fw-normal">
+    //                     {client}
+    //                 </span>
+    //             </td>
+    //             <td>
+    //                 <span className={`fw-normal`}>
+    //                     {projet}
+    //                 </span>
+    //             </td>
+    //             <td>
+    //                 <span className="fw-normal">
+    //                     {name}
+    //                 </span>
+    //             </td>
+    //             <td>
+    //                 <span className="fw-normal">
+    //                     {path}
+    //                 </span>
+    //             </td>
+    //             <td>
+    //                 <span className={`fw-normal`}>
+    //                     {status}
+    //                 </span>
+    //             </td>
+    //             <td>
+    //                 <span className="fw-normal">
+    //                     {data}
+    //                 </span>
+    //             </td>
+    //             <td>
+    //                 <span className="fw-normal">
+    //                     {type}
+    //                 </span>
+    //             </td>
+    //             <td>
+    //                 <span className={`fw-normal`}>
+    //                     {treated}
+    //                 </span>
+    //             </td>
+    //             <td>
+    //                 <span className="fw-normal">
+    //                     {accuracy}
+    //                 </span>
+    //             </td>
+    //             <td>
+    //                 <span className="fw-normal">
+    //                     {inspect}
+    //                 </span>
+    //             </td>
+    //         </tr>
+    //     );
+    // };
+
     const tablerow = list.map(({ id, client, projet, name, path, status, data, type, treated, accuracy, inspect }) => {
         return (
             <tr>
@@ -51,9 +148,9 @@ export const TableDocument = () => {
                     /></td>
                 <td>
                     <span className="fw-normal">
-                        <Nav.Link className="collapse-close d-md-none">
-                            {client}
-                        </Nav.Link>
+                        {/* <Nav.Link className="collapse-close d-md-none"> */}
+                        {client}
+                        {/* </Nav.Link> */}
                     </span>
                 </td>
                 <td>

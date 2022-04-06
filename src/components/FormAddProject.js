@@ -7,7 +7,7 @@ import { faCalendarAlt, faSave } from '@fortawesome/free-solid-svg-icons';
 import { Col, Row, Card, Form, Button, InputGroup } from '@themesberg/react-bootstrap';
 
 
-export const AddDocument = () => {
+export const FormAddProject = () => {
     const [birthday, setBirthday] = useState("");
 
     return (
@@ -174,28 +174,6 @@ export const AddDocument = () => {
                             </Form.Group>
                         </Col>
                     </Row>
-                    {/* <Row>
-                        <Col sm={3} className="mb-3">
-                            <Form.Group id="address">
-                                <Button variant="primary" type="submit">Save and another</Button>
-                            </Form.Group>
-                        </Col>
-                        <Col sm={3} className="mb-3">
-                            <Form.Group id="addressNumber">
-                                <Button variant="primary" type="submit">Save and continue editing</Button>
-                            </Form.Group>
-                        </Col>
-                        <Col sm={3} className="mb-3">
-                            <Form.Group id="addressNumber">
-                                <Button variant="primary" type="submit">Save</Button>
-                            </Form.Group>
-                        </Col>
-                    </Row> */}
-                    {/* <div className="mt-3">
-                        {/* <Button variant="primary" type="submit">Save and another</Button>
-                        <Button variant="primary" type="submit">Save and continue editing</Button> * /}
-                        <Button variant="primary" type="submit">Save</Button>
-                    </div> */}
                     <div className="form-group mt-3">
                         <div className="row">
                             <div class="mb-3 mx-auto row d-fex d-flex-inline justify-content-around">
