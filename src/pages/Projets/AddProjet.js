@@ -1,8 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faBoxOpen, faCartArrowDown, faChartPie, faChevronDown, faClipboard, faCommentDots, faFileAlt, faPlus, faRocket, faStore } from '@fortawesome/free-solid-svg-icons';
-import { Col,Container, Row, Button, Dropdown, Form, ButtonGroup, Breadcrumb, InputGroup } from '@themesberg/react-bootstrap';
-import { ChoosePhotoWidget, ProfileCardWidget } from "../../components/Widgets";
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { Container, Breadcrumb } from '@themesberg/react-bootstrap';
 import { FormAddProject } from "../../components/FormAddProject";
 
 
