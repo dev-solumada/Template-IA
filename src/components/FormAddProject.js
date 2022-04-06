@@ -4,11 +4,10 @@ import moment from "moment-timezone";
 import Datetime from "react-datetime";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faSave } from '@fortawesome/free-solid-svg-icons';
-import { Col, Row, Card, Form, Button, InputGroup } from '@themesberg/react-bootstrap';
+import { Col, Row, Card, Form, Button } from '@themesberg/react-bootstrap';
 
 
 export const FormAddProject = () => {
-    const [birthday, setBirthday] = useState("");
 
     return (
         <Card border="light" className="bg-white shadow-sm mb-4 col-12 col-sm-12 col-md-10 col-lg-8 col-xl-8 mx-auto justify-content-center align-item-center">
@@ -26,123 +25,13 @@ export const FormAddProject = () => {
                                 </Form.Select>
                             </Form.Group>
                         </Col>
-                        <Col md={4} className="mb-3">
-                            <br />
-                            {/* <Form.Group id="gender"> */}
-                            <Button variant="primary" type="submit">History</Button>
-                            {/* </Form.Group> */}
-                        </Col>
                     </Row>
-                    <Row>
-                        <Col md={12} className="mb-3">
-                            <Form.Group id="projet">
-                                <Form.Label>Projet</Form.Label>
-                                <Form.Select defaultValue="0">
-                                    <option value="0">------</option>
-                                    <option value="1">Plastification</option>
-                                    <option value="2">Impression</option>
-                                    <option value="3">Personnalisation</option>
-                                </Form.Select>
-                            </Form.Group>
-                        </Col>
-                    </Row>
+                    
                     <Row>
                         <Col md={12} className="mb-3">
                             <Form.Group id="name">
                                 <Form.Label>Name</Form.Label>
                                 <Form.Control required type="text" placeholder="Your name" />
-                            </Form.Group>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col md={6} className="mb-3">
-                            <Form.Group id="name">
-                                <Form.Label>Path</Form.Label>
-                                <Form.Control required type="file" />
-                            </Form.Group>
-                        </Col>
-                        <Col md={6} className="mb-3">
-                            <Form.Group id="name">
-                                <Form.Label>Status</Form.Label>
-                                <Form.Check type="checkbox" />
-                            </Form.Group>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col md={6} className="mb-3">
-                            <Form.Group id="name">
-                                <Form.Label>Type</Form.Label>
-                                <Form.Control required type="text" placeholder="Type" />
-                            </Form.Group>
-                        </Col>
-                        <Col md={6} className="mb-3">
-                            <Form.Group id="name">
-                                <Form.Label>Accuracy cls</Form.Label>
-                                <Form.Control required type="text" placeholder="Accuracy" />
-                            </Form.Group>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col md={6} className="mb-3">
-                            <Form.Group id="name">
-                                <Form.Label>Image annotation</Form.Label>
-                                <Form.Control required type="file" />
-                            </Form.Group>
-                        </Col>
-                        <Col md={6} className="mb-3">
-                            <Form.Group id="name">
-                                <Form.Label>Manualy corrected</Form.Label>
-                                <Form.Check type="checkbox" />
-                            </Form.Group>
-                        </Col>
-                    </Row>
-
-                    <Row>
-                        <Col md={12} className="mb-3">
-                            <Form.Group id="name">
-                                <Form.Label>Type Annotation</Form.Label>
-                                {/* <FloatingLabel controlId="floatingTextarea2" label="Comments"> */}
-
-                                <Form.Control required type="text" placeholder="Type annotation" />
-                                {/* </FloatingLabel> */}
-                            </Form.Group>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col md={12} className="mb-3">
-                            <Form.Group id="name">
-                                <Form.Label>Content Annotorious</Form.Label>
-                                {/* <FloatingLabel controlId="floatingTextarea2" label="Comments"> */}
-                                <Form.Control
-                                    as="textarea"
-                                    style={{ height: '100px' }}
-                                />
-                                {/* </FloatingLabel> */}
-                            </Form.Group>
-                        </Col>
-                    </Row>
-
-                    <Row>
-                        <Col md={12} className="mb-3">
-                            <Form.Group id="name">
-                                <Form.Label>Data anotorious</Form.Label>
-                                {/* <FloatingLabel controlId="floatingTextarea2" label="Comments"> */}
-                                <Form.Control
-                                    as="textarea"
-                                    style={{ height: '100px' }}
-                                />
-                                {/* </FloatingLabel> */}
-                            </Form.Group>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col md={12} className="mb-3">
-                            <Form.Group id="name">
-                                <Form.Label>Accuracy Annotation</Form.Label>
-                                {/* <FloatingLabel controlId="floatingTextarea2" label="Comments"> */}
-
-                                <Form.Control required type="number" />
-                                {/* </FloatingLabel> */}
                             </Form.Group>
                         </Col>
                     </Row>
