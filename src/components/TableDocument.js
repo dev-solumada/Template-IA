@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faAngleUp, faArrowDown, faArrowUp, faEdit, faEllipsisH, faExternalLinkAlt, faEye, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
-import { Col, Row, Nav, Card, Image, Button, Table, Dropdown, ProgressBar, Pagination, ButtonGroup } from '@themesberg/react-bootstrap';
+import { faSearch, faAngleDown, faAngleUp, faArrowDown, faArrowUp, faEdit, faEllipsisH, faExternalLinkAlt, faEye, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { Col, Row, Nav, Card, Image, Form, Button, Table, Dropdown, InputGroup, ProgressBar, Pagination, ButtonGroup } from '@themesberg/react-bootstrap';
 import { Link } from 'react-router-dom';
 
 import { Routes } from "../routes";
 import documents from "../data/tableDocument";
 
-
 export const TableDocument = () => {
-    const totalTransactions = documents.length;
+    // const totalTransactions = documents.length;
+
 
     const [isCheckAll, setIsCheckAll] = useState(false);
     const [isCheck, setIsCheck] = useState([]);
@@ -202,36 +202,51 @@ export const TableDocument = () => {
         );
     });
     return (
-        <Card border="light" className="table-wrapper table-responsive shadow-sm">
-            <Card.Body className="pt-0">
-                <Table hover className="user-table align-items-center">
-                    <thead>
-                        <tr>
-                            <th className="border-bottom">
-                                <input
-                                    type="checkbox"
-                                    // checked={checked}
-                                    onChange={handleSelectAll}
-                                />
-                            </th>
-                            <th className="border-bottom">CLIENT</th>
-                            <th className="border-bottom">PROJET</th>
-                            <th className="border-bottom">NAME</th>
-                            <th className="border-bottom">PATH</th>
-                            <th className="border-bottom">STATUS</th>
-                            <th className="border-bottom">DATA ANNOTORIOUS</th>
-                            <th className="border-bottom">TYPE</th>
-                            <th className="border-bottom">IS TREATED</th>
-                            <th className="border-bottom">ACCURACY CLS</th>
-                            <th className="border-bottom">INSPECT</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {tablerow}
-                        {/* {documents.map(t => <TableRow key={`transaction-${t.id}`} {...t} />)} */}
-                    </tbody>
-                </Table>
-            </Card.Body>
-        </Card>
+        <>
+            <div className="table-settings mb-4">
+                <Row className="justify-content-between align-items-center">
+                    <Col xs={8} md={6} lg={3} xl={4}>
+                        <InputGroup>
+                            <InputGroup.Text>
+                                <FontAwesomeIcon icon={faSearch} />
+                            </InputGroup.Text>
+                            <Form.Control type="text" placeholder="Search" />
+                        </InputGroup>
+                    </Col>
+                </Row>
+            </div>
+
+            <Card border="light" className="table-wrapper table-responsive shadow-sm">
+                <Card.Body className="pt-0">
+                    <Table hover className="user-table align-items-center">
+                        <thead>
+                            <tr>
+                                <th className="border-bottom">
+                                    <input
+                                        type="checkbox"
+                                        onChange={handleSelectAll}
+                                        checked={isCheckAll}
+                                    // onChange={allChange}
+                                    />
+                                </th>
+                                <th className="border-bottom">CLIENT</th>
+                                <th className="border-bottom">PROJET</th>
+                                <th className="border-bottom">NAME</th>
+                                <th className="border-bottom">PATH</th>
+                                <th className="border-bottom">STATUS</th>
+                                <th className="border-bottom">DATA ANNOTORIOUS</th>
+                                <th className="border-bottom">TYPE</th>
+                                <th className="border-bottom">IS TREATED</th>
+                                <th className="border-bottom">ACCURACY CLS</th>
+                                <th className="border-bottom">INSPECT</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {tablerow}
+                        </tbody>
+                    </Table>
+                </Card.Body>
+            </Card>
+        </>
     );
 };
