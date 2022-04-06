@@ -52,7 +52,7 @@ export const TableProjet = () => {
                 </td>
                 <td>
                     <span className="fw-normal">
-                        <Link to="/">
+                        <Link to="/document">
                             <Button variant="secondary" className="btn btn-sm">Show Project</Button>
                         </Link>
                     </span>
