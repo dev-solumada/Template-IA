@@ -20,10 +20,26 @@ export default () => {
                     <h4>All document</h4>
                 </div>
             </div>
-
-            {/* <div className="table-settings mb-4">
-                <Row className="justify-content-between align-items-center">
+            <div className="table-settings mb-4">
+                <Row className="justify-content-between">
                     <Col xs={8} md={6} lg={3} xl={4}>
+                        <Form>
+                            <label>Action :</label>
+                            <Row className="justify-content-between align-items-center">
+                                <Col xs={10} md={10} lg={10} xl={10}>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>------------------</option>
+                                        <option value="1">Delete Selected document</option>
+                                    </select>
+                                </Col>
+                                <Col xs={2} md={2} lg={2} xl={2}>
+                                    <Button variant="primary" className="btn btn-sm">GO</Button>
+                                </Col>
+                            </Row>
+                        </Form>
+                    </Col>
+                    <Col xs={8} md={6} lg={3} xl={4}>
+                        <br />
                         <InputGroup>
                             <InputGroup.Text>
                                 <FontAwesomeIcon icon={faSearch} />
@@ -32,7 +48,7 @@ export default () => {
                         </InputGroup>
                     </Col>
                 </Row>
-            </div> */}
+            </div>
 
             <TableDocument />
             <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">

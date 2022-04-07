@@ -6,247 +6,106 @@ import { Link } from 'react-router-dom';
 
 import { Routes } from "../routes";
 import documents from "../data/tableDocument";
+import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+// import "./document.css"
+
+const columns: GridColDef[] = [
+    // { field: 'id', headerName: 'ID', width: 90 },
+    {
+        field: 'client',
+        headerName: 'Client',
+        width: 150,
+        editable: true,
+        cellClassName: 'super-app-theme--cell',
+        renderCell: (params) => (
+            < Link to="/document/update" >{params.value}
+                {/* <Button variant="secondary" className="btn btn-sm">Show Document</Button> */}
+            </Link >
+            // <Link href={"/document/update"}>{params.value}</Link>
+        )
+        //   renderCell: (params) => (
+        //     <Link href={`/form/${params.value}`}>{params.value}</Link>
+        //   )
+        // headerClassName: 'super-app-theme--header',
+    },
+    {
+        field: 'projet',
+        headerName: 'Projet',
+        width: 150,
+        editable: true,
+    },
+    {
+        field: 'name',
+        headerName: 'Name',
+        width: 150,
+        editable: true,
+    },
+    {
+        field: 'path',
+        headerName: 'Path',
+        width: 150,
+        editable: true,
+        renderCell: (params) => (
+            < Link to="/document/pdf" >
+                {params.value}
+            </Link >)
+    },
+    {
+        field: 'status',
+        headerName: 'Status',
+        width: 150,
+        editable: true,
+    },
+    {
+        field: 'data',
+        headerName: 'Data',
+        width: 150,
+        editable: true,
+    },
+    {
+        field: 'type',
+        headerName: 'Type',
+        width: 150,
+        editable: true,
+    },
+    {
+        field: 'treated',
+        headerName: 'Is Treated',
+        width: 150,
+        editable: true,
+    },
+    {
+        field: 'accuracy',
+        headerName: 'Accuracy cls',
+        width: 160,
+        editable: true,
+    },
+    {
+        field: 'inspect',
+        headerName: 'Inspect',
+        width: 200,
+        editable: true,
+        renderCell: (params) => (
+            < Link to="/document/inspect" >
+                <Button variant="secondary" className="btn btn-sm">inspect</Button>
+            </Link >
+        )
+    },
+];
 
 export const TableDocument = () => {
-    // const totalTransactions = documents.length;
-
-
-    const [isCheckAll, setIsCheckAll] = useState(false);
-    const [isCheck, setIsCheck] = useState([]);
-    const [list, setList] = useState([]);
-
-    useEffect(() => {
-        setList(documents);
-    }, [list]);
-
-    const handleSelectAll = e => {
-        setIsCheckAll(!isCheckAll);
-        setIsCheck(list.map(li => li.id));
-        if (isCheckAll) {
-            setIsCheck([]);
-        }
-    };
-
-    const handleClick = e => {
-        const { id, checked } = e.target;
-        setIsCheck([...isCheck, id]);
-        if (!checked) {
-            setIsCheck(isCheck.filter(item => item !== id));
-        }
-    };
-
-    console.log("isCheck ==== ", isCheck);
-    console.log("isCheckAll ==== ", isCheckAll);
-
-    // const TableRow = (props) => {
-    //     const { isChecked = false, id, client, projet, name, path, status, data, type, treated, accuracy, inspect } = props;
-
-    //     this.state = {
-    //         allChecked: false,
-    //         list: [
-    //            props
-    //         ],
-    //     };
-
-    //     // const [checked, setChecked] = React.useState(false);
-
-    //     // const handleChange = () => {
-    //     //     setChecked(!checked);
-    //     // };
-
-    //     // console.log("pppp=== ", props);
-    //     // console.log("handleChange=== ", checked);
-
-    //     handleChange = (e) => {
-    //         let list = this.state.list;
-    //         let allChecked = this.state.allChecked;
-    //         if (e.target.value === "checkAll") {
-    //             list.forEach(item => {
-    //                 item.isChecked = e.target.checked;
-    //                 allChecked = e.target.checked;
-    //             });
-    //         }
-    //         else {
-    //             list.find(item => item.name === e.target.name).isChecked = e.target.checked;
-    //         }
-    //         this.setState({ list: list, allChecked: allChecked });
-    //     }
-    //     return (
-    //         <tr>
-    //             <td>
-    //                 <input
-    //                     type="checkbox"
-    //                 // checked={checked}
-    //                 // onChange={handleChange}
-    //                 />
-    //             </td>
-    //             <td>
-    //                 <span className="fw-normal">
-    //                     {client}
-    //                 </span>
-    //             </td>
-    //             <td>
-    //                 <span className={`fw-normal`}>
-    //                     {projet}
-    //                 </span>
-    //             </td>
-    //             <td>
-    //                 <span className="fw-normal">
-    //                     {name}
-    //                 </span>
-    //             </td>
-    //             <td>
-    //                 <span className="fw-normal">
-    //                     {path}
-    //                 </span>
-    //             </td>
-    //             <td>
-    //                 <span className={`fw-normal`}>
-    //                     {status}
-    //                 </span>
-    //             </td>
-    //             <td>
-    //                 <span className="fw-normal">
-    //                     {data}
-    //                 </span>
-    //             </td>
-    //             <td>
-    //                 <span className="fw-normal">
-    //                     {type}
-    //                 </span>
-    //             </td>
-    //             <td>
-    //                 <span className={`fw-normal`}>
-    //                     {treated}
-    //                 </span>
-    //             </td>
-    //             <td>
-    //                 <span className="fw-normal">
-    //                     {accuracy}
-    //                 </span>
-    //             </td>
-    //             <td>
-    //                 <span className="fw-normal">
-    //                     {inspect}
-    //                 </span>
-    //             </td>
-    //         </tr>
-    //     );
-    // };
-
-    const tablerow = list.map(({ id, client, projet, name, path, status, data, type, treated, accuracy, inspect }) => {
-        return (
-            <tr>
-                <td>
-                    <input
-                        onChange={handleClick}
-                        key={id}
-                        type="checkbox"
-                        name={name}
-                        id={id}
-                        checked={isCheck.includes(id)}
-                    /></td>
-                <td>
-                    <span className="fw-normal">
-                        {/* <Nav.Link className="collapse-close d-md-none"> */}
-                        {client}
-                        {/* </Nav.Link> */}
-                    </span>
-                </td>
-                <td>
-                    <span className={`fw-normal`}>
-                        {projet}
-                    </span>
-                </td>
-                <td>
-                    <span className="fw-normal">
-                        {name}
-                    </span>
-                </td>
-                <td>
-                    <span className="fw-normal">
-                        {path}
-                    </span>
-                </td>
-                <td>
-                    <span className={`fw-normal`}>
-                        {status}
-                    </span>
-                </td>
-                <td>
-                    <span className="fw-normal">
-                        {data}
-                    </span>
-                </td>
-                <td>
-                    <span className="fw-normal">
-                        {type}
-                    </span>
-                </td>
-                <td>
-                    <span className={`fw-normal`}>
-                        {treated}
-                    </span>
-                </td>
-                <td>
-                    <span className="fw-normal">
-                        {accuracy}
-                    </span>
-                </td>
-                <td>
-                    <span className="fw-normal">
-                        {inspect}
-                    </span>
-                </td>
-            </tr>
-        );
-    });
     return (
-        <>
-            <div className="table-settings mb-4">
-                <Row className="justify-content-between align-items-center">
-                    <Col xs={8} md={6} lg={3} xl={4}>
-                        <InputGroup>
-                            <InputGroup.Text>
-                                <FontAwesomeIcon icon={faSearch} />
-                            </InputGroup.Text>
-                            <Form.Control type="text" placeholder="Search" />
-                        </InputGroup>
-                    </Col>
-                </Row>
-            </div>
-
-            <Card border="light" className="table-wrapper table-responsive shadow-sm">
-                <Card.Body className="pt-0">
-                    <Table hover className="user-table align-items-center">
-                        <thead>
-                            <tr>
-                                <th className="border-bottom">
-                                    <input
-                                        type="checkbox"
-                                        onChange={handleSelectAll}
-                                        checked={isCheckAll}
-                                    // onChange={allChange}
-                                    />
-                                </th>
-                                <th className="border-bottom">CLIENT</th>
-                                <th className="border-bottom">PROJET</th>
-                                <th className="border-bottom">NAME</th>
-                                <th className="border-bottom">PATH</th>
-                                <th className="border-bottom">STATUS</th>
-                                <th className="border-bottom">DATA ANNOTORIOUS</th>
-                                <th className="border-bottom">TYPE</th>
-                                <th className="border-bottom">IS TREATED</th>
-                                <th className="border-bottom">ACCURACY CLS</th>
-                                <th className="border-bottom">INSPECT</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {tablerow}
-                        </tbody>
-                    </Table>
-                </Card.Body>
-            </Card>
-        </>
+        <div style={{ height: 400, width: '100%' }}>
+            <DataGrid
+                rows={documents}
+                columns={columns}
+                pageSize={5}
+                rowsPerPageOptions={[5]}
+                checkboxSelection
+                disableSelectionOnClick
+                onSelectionModelChange={itm => console.log(itm)}
+            />
+            { }
+        </div>
     );
-};
+}

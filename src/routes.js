@@ -37,6 +37,10 @@ export const Routes = {
     UpdateProject: { path: "/projet/update" },
     HistoryProject: { path: "/projet/history" },
 
+    //inspect
+    InspectDocument: { path: "/document/inspect" },
+
+    viewPDF: { path: "/document/pdf" },
 
     // docs
     DocsOverview: { path: "/documentation/overview" },
