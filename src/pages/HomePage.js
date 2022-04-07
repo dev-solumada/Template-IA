@@ -61,6 +61,9 @@ import Documents from "./Documents/Documents";
 import AddDocument from "./Documents/AddDocument";
 import UpdateDocument from "./Documents/UpdateDocument";
 import HistoryDocument from "./Documents/HistoryDocument";
+import InspectDocument from "./Documents/Inspect";
+
+import viewPDF from "./Documents/viewPDF";
 
 import Projets from "./Projets/Projets";
 import AddProject from "./Projets/AddProjet";
@@ -174,6 +177,12 @@ export default () => (
     <RouteWithSidebar exact path={Routes.AddDocument.path} component={AddDocument} />
     <RouteWithSidebar exact path={Routes.UpdateDocument.path} component={UpdateDocument} />
     <RouteWithSidebar exact path={Routes.HistoryDocument.path} component={HistoryDocument} />
+
+    {/* inspect */}
+    <RouteWithSidebar exact path={Routes.InspectDocument.path} component={InspectDocument} />
+
+    {/* view pdf */}
+    <RouteWithSidebar exact path={Routes.viewPDF.path} component={viewPDF} />
 
     {/* projet */}
     <RouteWithSidebar exact path={Routes.Project.path} component={Projets} />

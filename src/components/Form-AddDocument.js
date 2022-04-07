@@ -15,7 +15,7 @@ export const AddDocument = () => {
             <Card.Body>
                 <Form>
                     <Row>
-                        <Col md={8} className="mb-3">
+                        <Col md={12} className="mb-3">
                             <Form.Group id="gender">
                                 <Form.Label>Client</Form.Label>
                                 <Form.Select defaultValue="0">
@@ -25,12 +25,6 @@ export const AddDocument = () => {
                                     <option value="3">Clara</option>
                                 </Form.Select>
                             </Form.Group>
-                        </Col>
-                        <Col md={4} className="mb-3">
-                            <br />
-                            {/* <Form.Group id="gender"> */}
-                            <Button variant="primary" type="submit">History</Button>
-                            {/* </Form.Group> */}
                         </Col>
                     </Row>
                     <Row>

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { Routes } from "../routes";
 import documents from "../data/tableDocument";
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
-import "./document.css"
+// import "./document.css"
 
 const columns: GridColDef[] = [
     // { field: 'id', headerName: 'ID', width: 90 },
@@ -16,14 +16,17 @@ const columns: GridColDef[] = [
         headerName: 'Client',
         width: 150,
         editable: true,
+        cellClassName: 'super-app-theme--cell',
         renderCell: (params) => (
-            <Link href={"/document/update"}>{params.value}</Link>
+            < Link to="/document/update" >{params.value}
+                {/* <Button variant="secondary" className="btn btn-sm">Show Document</Button> */}
+            </Link >
+            // <Link href={"/document/update"}>{params.value}</Link>
         )
         //   renderCell: (params) => (
         //     <Link href={`/form/${params.value}`}>{params.value}</Link>
         //   )
         // headerClassName: 'super-app-theme--header',
-        // cellClassName: 'super-app-theme--cell',
     },
     {
         field: 'projet',
@@ -33,51 +36,60 @@ const columns: GridColDef[] = [
     },
     {
         field: 'name',
-        headerName: 'name',
+        headerName: 'Name',
         width: 150,
         editable: true,
     },
     {
         field: 'path',
-        headerName: 'path',
+        headerName: 'Path',
         width: 150,
         editable: true,
+        renderCell: (params) => (
+            < Link to="/document/pdf" >
+                {params.value}
+            </Link >)
     },
     {
         field: 'status',
-        headerName: 'status',
+        headerName: 'Status',
         width: 150,
         editable: true,
     },
     {
         field: 'data',
-        headerName: 'data',
+        headerName: 'Data',
         width: 150,
         editable: true,
     },
     {
         field: 'type',
-        headerName: 'type',
+        headerName: 'Type',
         width: 150,
         editable: true,
     },
     {
         field: 'treated',
-        headerName: 'treated',
+        headerName: 'Is Treated',
         width: 150,
         editable: true,
     },
     {
         field: 'accuracy',
-        headerName: 'accuracy',
+        headerName: 'Accuracy cls',
         width: 160,
         editable: true,
     },
     {
         field: 'inspect',
-        headerName: 'inspect',
+        headerName: 'Inspect',
         width: 200,
         editable: true,
+        renderCell: (params) => (
+            < Link to="/document/inspect" >
+                <Button variant="secondary" className="btn btn-sm">inspect</Button>
+            </Link >
+        )
     },
 ];
 
