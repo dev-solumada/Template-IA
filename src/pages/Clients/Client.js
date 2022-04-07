@@ -23,24 +23,6 @@ const Client = () => {
                 </div>
             </div>
 
-            <div className="table-settings mb-4">
-                <Row className="justify-content-between">
-                    <Col xs={8} md={6} lg={3} xl={4}>
-                        <Form>
-                            <label>Action :</label>
-                        </Form>
-                    </Col>
-                    <Col xs={8} md={6} lg={3} xl={4}>
-                        <InputGroup>
-                            <InputGroup.Text>
-                                <FontAwesomeIcon icon={faSearch} />
-                            </InputGroup.Text>
-                            <Form.Control type="text" placeholder="Search" />
-                        </InputGroup>
-                    </Col>
-                </Row>
-            </div>
-
             <TableClient />
             
             <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">

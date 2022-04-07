@@ -36,11 +36,11 @@ export const AddNewClient = () => {
                                 <Form.Label>Created At</Form.Label>
                                 <Row>
                                     <Col md={6} className="mb-1">
-                                        <span>Date</span>
+                                        <span>date</span>
                                         <Form.Control required type="date" />
                                     </Col>
                                     <Col md={6}>
-                                        <span>Time</span>
+                                        <span>time</span>
                                         <Form.Control required type="time" />
                                     </Col>
                                 </Row>
