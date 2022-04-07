@@ -28,15 +28,15 @@ export default () => {
           scope={{ Form }}
           imports={`import { Form } from '@themesberg/react-bootstrap';`}
           example={`<Form>
-  <Form.Group className="mb-3">
-    <Form.Label>Email address</Form.Label>
-    <Form.Control type="email" placeholder="name@example.com" />
-  </Form.Group>
-  <Form.Group className="mb-3">
-    <Form.Label>Example textarea</Form.Label>
-    <Form.Control as="textarea" rows="3" />
-  </Form.Group>
-</Form>`}
+                      <Form.Group className="mb-3">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control type="email" placeholder="name@example.com" />
+                      </Form.Group>
+                      <Form.Group className="mb-3">
+                        <Form.Label>Example textarea</Form.Label>
+                        <Form.Control as="textarea" rows="3" />
+                      </Form.Group>
+                    </Form>`}
         />
 
         <Documentation
@@ -46,24 +46,24 @@ export default () => {
           }
           scope={{ Form, InputGroup, FontAwesomeIcon, faSearch }}
           imports={`import { Form, InputGroup } from '@themesberg/react-bootstrap';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";`}
-          example={`<Form>
-  <Form.Group className="mb-3">
-    <Form.Label>Icon Left</Form.Label>
-    <InputGroup>
-      <InputGroup.Text><FontAwesomeIcon icon={faSearch} /></InputGroup.Text>
-      <Form.Control type="text" placeholder="Search" />
-    </InputGroup>
-  </Form.Group>
-  <Form.Group className="mb-3">
-    <Form.Label>Icon Right</Form.Label>
-    <InputGroup>
-      <Form.Control type="text" placeholder="Search" />
-      <InputGroup.Text><FontAwesomeIcon icon={faSearch} /></InputGroup.Text>
-    </InputGroup>
-  </Form.Group>
-</Form>`}
+                    import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+                    import { faSearch } from "@fortawesome/free-solid-svg-icons";`}
+                              example={`<Form>
+                      <Form.Group className="mb-3">
+                        <Form.Label>Icon Left</Form.Label>
+                        <InputGroup>
+                          <InputGroup.Text><FontAwesomeIcon icon={faSearch} /></InputGroup.Text>
+                          <Form.Control type="text" placeholder="Search" />
+                        </InputGroup>
+                      </Form.Group>
+                      <Form.Group className="mb-3">
+                        <Form.Label>Icon Right</Form.Label>
+                        <InputGroup>
+                          <Form.Control type="text" placeholder="Search" />
+                          <InputGroup.Text><FontAwesomeIcon icon={faSearch} /></InputGroup.Text>
+                        </InputGroup>
+                      </Form.Group>
+                    </Form>`}
         />
 
         <Documentation
@@ -74,17 +74,17 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";`}
           scope={{ Form }}
           imports={`import { Form } from '@themesberg/react-bootstrap';`}
           example={`<Form>
-  <Form.Group className="mb-3">
-    <Form.Label>Username</Form.Label>
-    <Form.Control required isInvalid type="text" />
-    <Form.Control.Feedback type="invalid">Please choose a username.</Form.Control.Feedback>
-  </Form.Group>
-  <Form.Group className="mb-3">
-    <Form.Label>First name</Form.Label>
-    <Form.Control required isValid type="text" defaultValue="Mark" />
-    <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
-  </Form.Group>
-</Form>`}
+                    <Form.Group className="mb-3">
+                      <Form.Label>Username</Form.Label>
+                      <Form.Control required isInvalid type="text" />
+                      <Form.Control.Feedback type="invalid">Please choose a username.</Form.Control.Feedback>
+                    </Form.Group>
+                    <Form.Group className="mb-3">
+                      <Form.Label>First name</Form.Label>
+                      <Form.Control required isValid type="text" defaultValue="Mark" />
+                      <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
+                    </Form.Group>
+                  </Form>`}
         />
 
         <Documentation

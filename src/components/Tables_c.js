@@ -42,19 +42,19 @@ export const ProjectTable = () => {
           {selected ? selected : "-"}
         </td>
         <td className="border-0">
-          <ValueChange value={client} />
+          {client}
         </td>
         <td className="fw-bold border-0">
           {name ? name : "-"}
         </td>
         <td className="border-0">
-          <ValueChange value={created_at} />
+          {created_at}
         </td>
         <td className="fw-bold border-0">
           {updated_at ? updated_at : "-"}
         </td>
         <td className="border-0">
-          <ValueChange value={client_id} />
+          {"SHOW PROJECT"}
         </td>
       </tr>
     );

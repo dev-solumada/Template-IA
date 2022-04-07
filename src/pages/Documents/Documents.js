@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faCog, faHome, faSearch } from '@fortawesome/free-solid-svg-icons';
-import { Col, Row, Form, Button, ButtonGroup, Breadcrumb, InputGroup, Dropdown } from '@themesberg/react-bootstrap';
+import { Col, Row, Form, Button, ButtonGroup, Container, Breadcrumb, InputGroup, Dropdown } from '@themesberg/react-bootstrap';
 import { faBoxOpen, faCartArrowDown, faChartPie, faChevronDown, faClipboard, faCommentDots, faFileAlt, faPlus, faRocket, faStore } from '@fortawesome/free-solid-svg-icons';
 
 import { TableDocument } from "../../components/TableDocument";
@@ -20,7 +21,7 @@ export default () => {
                 </div>
             </div>
 
-            <div className="table-settings mb-4">
+            {/* <div className="table-settings mb-4">
                 <Row className="justify-content-between align-items-center">
                     <Col xs={8} md={6} lg={3} xl={4}>
                         <InputGroup>
@@ -31,20 +32,22 @@ export default () => {
                         </InputGroup>
                     </Col>
                 </Row>
-            </div>
+            </div> */}
 
             <TableDocument />
             <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
-                <Dropdown>
-                    <Dropdown.Toggle as={Button} variant="secondary" className="text-dark me-2" href="/volt-react-dashboard#/document/add">
+                {/* <Dropdown>
+                    <Dropdown.Toggle as={Button} variant="primary" className="text-dark me-2" href="/volt-react-dashboard#/document/add">
                         <FontAwesomeIcon icon={faPlus} className="me-2" />
                         <span>Add Document</span>
                     </Dropdown.Toggle>
-                    {/* <Dropdown.Toggle as={Button} variant="secondary" className="text-dark me-2">
-                        <FontAwesomeIcon icon={faPlus} className="me-2" />
-                        <span>New</span>
-                    </Dropdown.Toggle> */}
-                </Dropdown>
+                </Dropdown> */}
+                <Link to="/document/add">
+                    <Button variant="primary">
+                        <FontAwesomeIcon icon={faPlus} />
+                        <span> Add Document</span>
+                    </Button>
+                </Link>
             </div>
         </>
     );
