@@ -52,11 +52,11 @@ const AddClient = () => {
                                     <div className="col-9">
                                         <div className="mb-3">
                                             <div className="bootstrap-timepicker">
-                                                <label>Date :</label>
+                                                <label>date :</label>
                                                 <input type="date" className="form-control datetimepicker-input" data-target="#timepicker" />
                                             </div>
                                             <div className="bootstrap-timepicker">
-                                                <label>Time :</label>
+                                                <label>time :</label>
                                                 <input type="time" className="form-control datetimepicker-input" data-target="#timepicker" />
                                             </div>
                                         </div>
