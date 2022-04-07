@@ -27,7 +27,7 @@ const Projet = () => {
       {/*<ProjectTable />*/}
       <TableProjet/>
       <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
-          <Link to="/client/add">
+          <Link to="/projet/add">
                     <Button variant="primary">
                         <FontAwesomeIcon icon={faPlus} />
                         <span> Add Project</span>
