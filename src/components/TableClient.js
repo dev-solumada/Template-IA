@@ -49,9 +49,11 @@ export const TableClient = () => {
                         />
                     </td>
                     <td>
-                        <span className="fw-normal">
-                            {username}
-                        </span>
+                        <Link to="/client/detail">
+                            <span className="fw-normal">
+                                {username}
+                            </span>
+                        </Link>
                     </td>
                     <td>
                         <span className={`fw-normal}`}>
