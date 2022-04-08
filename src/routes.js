@@ -23,6 +23,7 @@ export const Routes = {
     Client: { path: "/client" },
     AddClient: { path: "/client/add" },
     UpdateClient: { path: "/client/update" },
+    ViewClient: { path: "/client/detail" },
     HistoryClient: { path: "/client/history" },
 
     //Document

@@ -56,6 +56,7 @@ import Client from "./Clients/Client";
 import AddClient from "./Clients/AddClient";
 import UpdateClient from "./Clients/UpdateClient";
 import HistoryClient from "./Clients/HistoryClient";
+import ViewClient from "./Clients/ViewClient";
 
 import Documents from "./Documents/Documents";
 import AddDocument from "./Documents/AddDocument";
@@ -171,6 +172,8 @@ export default () => (
     <RouteWithSidebar exact path={Routes.AddClient.path} component={AddClient} />
     <RouteWithSidebar exact path={Routes.UpdateClient.path} component={UpdateClient} />
     <RouteWithSidebar exact path={Routes.HistoryClient.path} component={HistoryClient} />
+    <RouteWithSidebar exact path={Routes.ViewClient.path} component={ViewClient} />
+
 
     {/* documents */}
     <RouteWithSidebar exact path={Routes.Document.path} component={Documents} />
