@@ -77,9 +77,9 @@ export const TableClient = () => {
                         <Form>
                             <Row className="d-flex d-flex-inline">
                                 <Col sm={12} xs={12} md={8} lg={2} className="mt-2">
-                                    <label>Action:</label>
+                                    <label>Action :</label>
                                 </Col>
-                                <Col sm={9} xs={10} md={10} lg={6} className="mb-2">
+                                <Col sm={10} xs={10} md={10} lg={6} className="mb-2">
                                     <select class="form-select text-center" aria-label="Default select example">
                                         <option selected>---------------</option>
                                         <option value="1">Delete selected Items</option>
