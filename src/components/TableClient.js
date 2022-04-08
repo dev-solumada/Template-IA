@@ -5,7 +5,7 @@ import { Col, Row, Nav, Card, Image, Button, Table,InputGroup, Form, Dropdown, P
 import { Link } from 'react-router-dom';
 
 import { Routes } from "../routes";
-import documents from "../data/ClientData";
+import clients from "../data/ClientData";
 
 
 
@@ -16,7 +16,7 @@ export const TableClient = () => {
         const [list, setList] = useState([]);
 
         useEffect(() => {
-            setList(documents);
+            setList(clients);
         }, [list]);
 
         const handleSelectAll = e => {
@@ -29,9 +29,9 @@ export const TableClient = () => {
 
         const handleClick = e => {
             const { id, checked } = e.target;
-            setChecked([...isChecked, id]);
+            setChecked([...isChecked, parseInt(id)]);
             if (!checked){
-                setChecked(isChecked.filter(item => item !== id));
+                setChecked(isChecked.filter(item => item !== parseInt(id)));
             }
         }
 
@@ -45,7 +45,7 @@ export const TableClient = () => {
                             type="checkbox"
                             name={username}
                             id={id}
-                            checked={isChecked.includes(id)}
+                            checked={isChecked.includes(parseInt(id))}
                         />
                     </td>
                     <td>
@@ -79,7 +79,7 @@ export const TableClient = () => {
                                 <Col sm={12} xs={12} md={8} lg={2} className="mt-2">
                                     <label>Action:</label>
                                 </Col>
-                                <Col sm={10} xs={10} md={10} lg={6} className="mb-2">
+                                <Col sm={9} xs={10} md={10} lg={6} className="mb-2">
                                     <select class="form-select text-center" aria-label="Default select example">
                                         <option selected>---------------</option>
                                         <option value="1">Delete selected Items</option>
