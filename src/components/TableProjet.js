@@ -22,19 +22,19 @@ const columns: GridColDef[] = [
     {
         field: 'name',
         headerName: 'Name',
-        width: 150,
+        width: 350,
         editable: false,
     },
     {
         field: 'created_at',
         headerName: 'Created At',
-        width: 150,
+        width: 300,
         editable: false,
     },
     {
         field: 'updated_at',
         headerName: 'Updated At',
-        width: 150,
+        width: 300,
         editable: false,
     },
     {
