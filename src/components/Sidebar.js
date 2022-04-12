@@ -122,13 +122,13 @@ export default (props = {}) => {
               </CollapsableNavItem>
 
               {/** Client */}
-              <NavItem title="Client" icon={faBook} link={Routes.Client.path} />
+              <NavItem title="Clients" icon={faBook} link={Routes.Client.path} />
 
               {/** Documents */}
               <NavItem title="Documents" icon={faBoxOpen} link={Routes.Document.path} />
 
               {/** Client */}
-              <NavItem title="Project" icon={faRocket} link={Routes.Project.path} />
+              <NavItem title="Projects" icon={faRocket} link={Routes.Project.path} />
               {/* <NavItem title="AddClient" icon={faCog} link={Routes.AddClient.path} />
               <NavItem title="UpdateClient" icon={faCog} link={Routes.UpdateClient.path} />
               <NavItem title="HistoryClient" icon={faCog} link={Routes.HistoryClient.path} /> */}
