@@ -17,7 +17,7 @@ const ViewClient = () => {
                             </Link>
                         </Breadcrumb.Item>
                         <Breadcrumb.Item>
-                            <Link to="/dasboard/overview/clients">Clients</Link>
+                            <Link to="/client">Client</Link>
                         </Breadcrumb.Item>
                         <Breadcrumb.Item>Detail</Breadcrumb.Item>
                     </Breadcrumb>
