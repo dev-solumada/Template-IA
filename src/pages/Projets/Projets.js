@@ -5,8 +5,10 @@ import { faHome, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { Button, Breadcrumb } from '@themesberg/react-bootstrap';
 // import { Link } from "react-router-dom";
 
+
 //import { ProjectTable } from "../../components/Tables_c";
 import { TableProjet } from "../../components/TableProjet";
+import FormAction from '../../components/Form-Action'
 const Projet = () => {
   return (
     <>
@@ -23,9 +25,10 @@ const Projet = () => {
           </p>
         </div>
       </div>
-      
-      {/*<ProjectTable />*/}
+
+      <FormAction />
       <TableProjet/>
+      
       <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
           <Link to="/projet/add">
                     <Button variant="primary">
