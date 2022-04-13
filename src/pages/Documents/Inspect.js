@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faBoxOpen, faCartArrowDown, faChartPie, faChevronDown, faClipboard, faCommentDots, faFileAlt, faPlus, faRocket, faStore } from '@fortawesome/free-solid-svg-icons';
 import { Col, Row, Button, Container, Dropdown, Form, ButtonGroup, Breadcrumb, InputGroup } from '@themesberg/react-bootstrap';
 // import { FormUpdateDocument } from "../../components/Form-UpdateDocument"
+import {TableInspect} from '../../components/TableInspect'
 
 const InspectDocument = () => {
     return (
@@ -15,6 +16,16 @@ const InspectDocument = () => {
                         <Breadcrumb.Item active>Add Document</Breadcrumb.Item>
                     </Breadcrumb>
                     <h4>Inspect document</h4>
+                </div>
+            </div>
+            
+
+            <div className="d-flex flex-wrap flex-md-nowrap">
+                <div className="d-block">
+                    
+                </div>
+                <div className="d-block">
+                    <TableInspect />
                 </div>
             </div>
 
