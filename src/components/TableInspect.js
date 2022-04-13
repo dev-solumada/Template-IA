@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faPlus,faSave } from "@fortawesome/free-solid-svg-icons";
 import { TransactionsTable } from "../components/Tables";
 import { Button, Table} from '@themesberg/react-bootstrap';
 //import {Table} from '@react-bootstrap/Table'
@@ -21,7 +21,7 @@ export const TableInspect = () => {
             
             <div className="ml-2">
                 <Button variant="primary">
-                    <FontAwesomeIcon icon={faPlus} />
+                    <FontAwesomeIcon icon={faSave} />
                     <span> Save</span>
                 </Button>
             </div>
