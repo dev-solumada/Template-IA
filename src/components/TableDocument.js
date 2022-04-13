@@ -1,107 +1,111 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faAngleUp, faArrowDown, faArrowUp, faEdit, faEllipsisH, faExternalLinkAlt, faEye, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
-import { Col, Row, Nav, Card, Image, Button, Table, Dropdown, ProgressBar, Pagination, ButtonGroup } from '@themesberg/react-bootstrap';
+import { faSearch, faAngleDown, faAngleUp, faArrowDown, faArrowUp, faEdit, faEllipsisH, faExternalLinkAlt, faEye, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { Col, Row, Nav, Card, Image, Form, Button, Table, Dropdown, InputGroup, ProgressBar, Pagination, ButtonGroup } from '@themesberg/react-bootstrap';
 import { Link } from 'react-router-dom';
 
 import { Routes } from "../routes";
 import documents from "../data/tableDocument";
+import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+// import "./document.css"
 
+const columns: GridColDef[] = [
+    // { field: 'id', headerName: 'ID', width: 90 },
+    {
+        field: 'client',
+        headerName: 'Client',
+        width: 150,
+        editable: true,
+        cellClassName: 'super-app-theme--cell',
+        renderCell: (params) => (
+            < Link to="/document/update" >{params.value}
+                {/* <Button variant="secondary" className="btn btn-sm">Show Document</Button> */}
+            </Link >
+            // <Link href={"/document/update"}>{params.value}</Link>
+        )
+        //   renderCell: (params) => (
+        //     <Link href={`/form/${params.value}`}>{params.value}</Link>
+        //   )
+        // headerClassName: 'super-app-theme--header',
+    },
+    {
+        field: 'projet',
+        headerName: 'Projet',
+        width: 150,
+        editable: true,
+    },
+    {
+        field: 'name',
+        headerName: 'Name',
+        width: 150,
+        editable: true,
+    },
+    {
+        field: 'path',
+        headerName: 'Path',
+        width: 150,
+        editable: true,
+        renderCell: (params) => (
+            < Link to="/document/pdf" >
+                {params.value}
+            </Link >)
+    },
+    {
+        field: 'status',
+        headerName: 'Status',
+        width: 150,
+        editable: true,
+    },
+    {
+        field: 'data',
+        headerName: 'Data',
+        width: 150,
+        editable: true,
+    },
+    {
+        field: 'type',
+        headerName: 'Type',
+        width: 150,
+        editable: true,
+    },
+    {
+        field: 'treated',
+        headerName: 'Is Treated',
+        width: 150,
+        editable: true,
+    },
+    {
+        field: 'accuracy',
+        headerName: 'Accuracy cls',
+        width: 160,
+        editable: true,
+    },
+    {
+        field: 'inspect',
+        headerName: 'Inspect',
+        width: 200,
+        editable: true,
+        renderCell: (params) => (
+            < Link to="/document/inspect" >
+                <Button variant="secondary" className="btn btn-sm">inspect</Button>
+            </Link >
+        )
+    },
+];
 
 export const TableDocument = () => {
-    const totalTransactions = documents.length;
-
-    const TableRow = (props) => {
-        const { invoiceNumber, client, projet, name, path, status, data, type, treated, accuracy, inspect } = props;
-        const statusVariant = status === "Paid" ? "success"
-            : status === "Due" ? "warning"
-                : status === "Canceled" ? "danger" : "primary";
-
-        return (
-            <tr>
-                <td>
-                    <Card.Link as={Link} to={Routes.Invoice.path} className="fw-normal">
-                        {invoiceNumber}
-                    </Card.Link>
-                </td>
-                <td>
-                    <span className="fw-normal">
-                        {client}
-                    </span>
-                </td>
-                <td>
-                    <span className={`fw-normal text-${statusVariant}`}>
-                        {projet}
-                    </span>
-                </td>
-                <td>
-                    <span className="fw-normal">
-                        {name}
-                    </span>
-                </td>
-                <td>
-                    <span className="fw-normal">
-                        {path}
-                    </span>
-                </td>
-                <td>
-                    <span className={`fw-normal text-${statusVariant}`}>
-                        {status}
-                    </span>
-                </td>
-                <td>
-                    <span className="fw-normal">
-                        {data}
-                    </span>
-                </td>
-                <td>
-                    <span className="fw-normal">
-                        {type}
-                    </span>
-                </td>
-                <td>
-                    <span className={`fw-normal text-${statusVariant}`}>
-                        {treated}
-                    </span>
-                </td>
-                <td>
-                    <span className="fw-normal">
-                        {accuracy}
-                    </span>
-                </td>
-                <td>
-                    <span className="fw-normal">
-                        {inspect}
-                    </span>
-                </td>
-            </tr>
-        );
-    };
-
     return (
-        <Card border="light" className="table-wrapper table-responsive shadow-sm">
-            <Card.Body className="pt-0">
-                <Table hover className="user-table align-items-center">
-                    <thead>
-                        <tr>
-                            <th className="border-bottom">NUM</th>
-                            <th className="border-bottom">CLIENT</th>
-                            <th className="border-bottom">PROJET</th>
-                            <th className="border-bottom">NAME</th>
-                            <th className="border-bottom">PATH</th>
-                            <th className="border-bottom">STATUS</th>
-                            <th className="border-bottom">DATA ANNOTORIOUS</th>
-                            <th className="border-bottom">TYPE</th>
-                            <th className="border-bottom">IS TREATED</th>
-                            <th className="border-bottom">ACCURACY CLS</th>
-                            <th className="border-bottom">INSPECT</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {documents.map(t => <TableRow key={`transaction-${t.invoiceNumber}`} {...t} />)}
-                    </tbody>
-                </Table>
-            </Card.Body>
-        </Card>
+        <div style={{ height: 400, width: '100%' }}>
+            <DataGrid
+                rows={documents}
+                columns={columns}
+                pageSize={5}
+                rowsPerPageOptions={[5]}
+                checkboxSelection
+                disableSelectionOnClick
+                onSelectionModelChange={itm => console.log(itm)}
+            />
+            { }
+        </div>
     );
-};
+}

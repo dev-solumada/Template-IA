@@ -22,25 +22,38 @@ const Client = () => {
                     <h4>Clients</h4>
                 </div>
             </div>
-
             <div className="table-settings mb-4">
                 <Row className="justify-content-between">
-                    <Col xs={8} md={6} lg={3} xl={4}>
+                    <Col sm={12} xs={12} md={12} lg={6} xl={6}>
                         <Form>
-                            <label>Action :</label>
+                            <Row className="d-flex d-flex-inline">
+                                <Col sm={12} xs={12} md={8} lg={2} className="mt-2">
+                                    <label>Action :</label>
+                                </Col>
+                                <Col sm={10} xs={10} md={10} lg={6} className="mb-2">
+                                    <select class="form-select text-center" aria-label="Default select example">
+                                        <option selected>---------------</option>
+                                        <option value="1">Delete selected Items</option>
+                                    </select>
+                                </Col>
+                                <Col sm={2} xs={2} md={2} className="mb-2">
+                                    <Button className="btn" variant="primary">Apply</Button>
+                                </Col>
+                            </Row>
                         </Form>
                     </Col>
-                    <Col xs={8} md={6} lg={3} xl={4}>
-                        <InputGroup>
+                    <Col sm={12} xs={12} md={12} lg={5} xl={4}>
+                        <Form>
+                            <InputGroup>
                             <InputGroup.Text>
                                 <FontAwesomeIcon icon={faSearch} />
                             </InputGroup.Text>
                             <Form.Control type="text" placeholder="Search" />
                         </InputGroup>
+                        </Form>
                     </Col>
                 </Row>
             </div>
-
             <TableClient />
             
             <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">

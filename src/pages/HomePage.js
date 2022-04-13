@@ -56,11 +56,15 @@ import Client from "./Clients/Client";
 import AddClient from "./Clients/AddClient";
 import UpdateClient from "./Clients/UpdateClient";
 import HistoryClient from "./Clients/HistoryClient";
+import ViewClient from "./Clients/ViewClient";
 
 import Documents from "./Documents/Documents";
 import AddDocument from "./Documents/AddDocument";
 import UpdateDocument from "./Documents/UpdateDocument";
 import HistoryDocument from "./Documents/HistoryDocument";
+import InspectDocument from "./Documents/Inspect";
+
+import viewPDF from "./Documents/viewPDF";
 
 import Projets from "./Projets/Projets";
 import AddProject from "./Projets/AddProjet";
@@ -168,12 +172,20 @@ export default () => (
     <RouteWithSidebar exact path={Routes.AddClient.path} component={AddClient} />
     <RouteWithSidebar exact path={Routes.UpdateClient.path} component={UpdateClient} />
     <RouteWithSidebar exact path={Routes.HistoryClient.path} component={HistoryClient} />
+    <RouteWithSidebar exact path={Routes.ViewClient.path} component={ViewClient} />
+
 
     {/* documents */}
     <RouteWithSidebar exact path={Routes.Document.path} component={Documents} />
     <RouteWithSidebar exact path={Routes.AddDocument.path} component={AddDocument} />
     <RouteWithSidebar exact path={Routes.UpdateDocument.path} component={UpdateDocument} />
     <RouteWithSidebar exact path={Routes.HistoryDocument.path} component={HistoryDocument} />
+
+    {/* inspect */}
+    <RouteWithSidebar exact path={Routes.InspectDocument.path} component={InspectDocument} />
+
+    {/* view pdf */}
+    <RouteWithSidebar exact path={Routes.viewPDF.path} component={viewPDF} />
 
     {/* projet */}
     <RouteWithSidebar exact path={Routes.Project.path} component={Projets} />
