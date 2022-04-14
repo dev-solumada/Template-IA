@@ -25,6 +25,7 @@ export const Routes = {
     UpdateClient: { path: "/client/update" },
     ViewClient: { path: "/client/detail" },
     HistoryClient: { path: "/client/history" },
+    PDFviewer: {path: "/client/viewPDF" },
 
     //Document
     Document: { path: "/document" },
@@ -40,7 +41,7 @@ export const Routes = {
 
     //inspect
     InspectDocument: { path: "/document/inspect" },
-
+    InspectDocument_h: { path: "/document/inspect_h" },
     viewPDF: { path: "/document/pdf" },
 
     // docs
