@@ -37,13 +37,16 @@ function nextPage() {
 
 return (
 	<>
-	<div className="justify-content-center overflow-scroll">
-        <Document
-            file={url}
-            onLoadSuccess={onDocumentLoadSuccess}
-        >
-            <Page pageNumber={pageNumber} />
-        </Document>
+	<Card className="py-3 h-75">
+        <div className="justify-content-center overflow-scroll">
+            <Document
+                file={url}
+                onLoadSuccess={onDocumentLoadSuccess}
+            >
+                <Page pageNumber={pageNumber} />
+            </Document>
+        </div>
+
         <Row>
             <Col>
                 <div className="d-flex justify-content-center">
@@ -65,7 +68,7 @@ return (
                 </div>
             </Col>
         </Row>
-	</div>
+	</Card>
 	</>
 );
 }

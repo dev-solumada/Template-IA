@@ -27,9 +27,7 @@ const PDFviewer = () => {
         
             <Row className="justify-content-center">
                 <Col md={8}>
-                    <Card className="py-3 h-75">
-                        <ViewPDF />
-                    </Card>
+                    <ViewPDF />
                 </Col>
             </Row>
         </>
