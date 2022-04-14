@@ -5,8 +5,8 @@ import { faHome, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Col, Row, Form, Card, Button, Breadcrumb, InputGroup } from "@themesberg/react-bootstrap";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { TableClient } from "../../components/TableClient";
-import ViewPDF from "./ViewPDF";
-// import pdfViewer2 from "./pdfViewer2";
+import ViewPDF from "./viewPDF";
+
 
 const PDFviewer = () => {
     return(
@@ -19,10 +19,10 @@ const PDFviewer = () => {
                                 <FontAwesomeIcon icon={faHome} />
                             </Link>
                         </Breadcrumb.Item>
-                        <Breadcrumb.Item>Client</Breadcrumb.Item>
+                        <Breadcrumb.Item>Document</Breadcrumb.Item>
                         <Breadcrumb.Item>pdfViewer</Breadcrumb.Item>
                     </Breadcrumb>
-                    <h4>Clients</h4>
+                    <h4>Documents</h4>
                 </div>
             </div>
         

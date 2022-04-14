@@ -25,13 +25,13 @@ export const Routes = {
     UpdateClient: { path: "/client/update" },
     ViewClient: { path: "/client/detail" },
     HistoryClient: { path: "/client/history" },
-    PDFviewer: {path: "/client/viewPDF" },
 
     //Document
     Document: { path: "/document" },
     AddDocument: { path: "/document/add" },
     UpdateDocument: { path: "/document/update" },
     HistoryDocument: { path: "/document/history" },
+    ViewPDF : {path: "/document/viewpdf"},
 
     //Project
     Project: { path: "/projet" },
