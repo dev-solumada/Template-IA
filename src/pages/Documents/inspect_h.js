@@ -6,7 +6,7 @@ import { Col, Row, Button, Container, Dropdown, Form, ButtonGroup, Breadcrumb, I
 import {TableInspect} from '../../components/TableInspect'
 import {DocumentInspect} from '../../components/DocumentInspect'
 
-const InspectDocument = () => {
+const InspectDocument_h = () => {
     return (
         <>
             <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
@@ -37,4 +37,4 @@ const InspectDocument = () => {
     );
 };
 
-export default InspectDocument;
+export default InspectDocument_h;
