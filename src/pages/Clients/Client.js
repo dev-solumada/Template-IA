@@ -17,7 +17,7 @@ const Client = () => {
                                 <FontAwesomeIcon icon={faHome} />
                             </Link>
                         </Breadcrumb.Item>
-                        <Breadcrumb.Item>Client</Breadcrumb.Item>
+                        <Breadcrumb.Item active>Client</Breadcrumb.Item>
                     </Breadcrumb>
                     <h4>Clients</h4>
                 </div>
