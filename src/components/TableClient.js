@@ -25,12 +25,6 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 const columns: GridColDef[] = [
     {
         cellClassName: 'super-app-theme--cell',
-        field: 'id',
-        headerName: 'ID',
-        width: 300,
-        editable: false,
-    },
-    {
         field: 'username',
         headerName: 'Username',
         width: 300,
@@ -50,10 +44,10 @@ const columns: GridColDef[] = [
     {
         field: 'showProject',
         headerName: 'SHOW Project',
-        width: 200,
+        width: 300,
         editable: false,
         renderCell: (params) => (
-            < Link to="/clients" >
+            < Link to="/projet" >
                 <Button variant="secondary" className="btn btn-sm">Show Project</Button>
             </Link >
         )

@@ -68,7 +68,7 @@ export const UpdateClientForm = () => {
                         </Col>
                     </Row>
 
-                    <div className="form-group mt-3">
+                    {/* <div className="form-group mt-3">
                         <div className="row">
                             <div class="mb-3 mx-auto row d-fex d-flex-inline justify-content-around">
                                 <div className="col-5 col-sm-5 col-md-5 col-xl-5 ml-2">
@@ -83,7 +83,7 @@ export const UpdateClientForm = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <hr />
                     <div className="mb-3 form-group">
                         <div className="row mx-auto">

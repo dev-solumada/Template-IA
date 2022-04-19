@@ -26,7 +26,7 @@ const HistoryClient = () => {
                                 Detail
                             </Link>
                         </Breadcrumb.Item>
-                        <Breadcrumb.Item>
+                        <Breadcrumb.Item active>
                             History
                         </Breadcrumb.Item>
                     </Breadcrumb>

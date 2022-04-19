@@ -24,11 +24,11 @@ const UpdateClient = () => {
                             <Breadcrumb.Item>
                                 <Link to="/client">Client</Link>
                             </Breadcrumb.Item>
-                            <Breadcrumb.Item active>Add</Breadcrumb.Item>
+                            <Breadcrumb.Item active>Update</Breadcrumb.Item>
                         </Breadcrumb>
                     </div>
                 </div>
-                <h4>New Client</h4>
+                <h4>Update Client</h4>
                 <Container className="px-0">
                     <UpdateClientForm />
                 </Container>
