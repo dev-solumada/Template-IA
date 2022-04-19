@@ -64,6 +64,7 @@ import AddDocument from "./Documents/AddDocument";
 import UpdateDocument from "./Documents/UpdateDocument";
 import HistoryDocument from "./Documents/HistoryDocument";
 import InspectDocument from "./Documents/Inspect";
+import InspectDocument1 from "./Documents/Inspect1";
 
 import viewPDF from "./Documents/viewPDF";
 
@@ -186,6 +187,7 @@ export default () => (
 
     {/* inspect */}
     <RouteWithSidebar exact path={Routes.InspectDocument.path} component={InspectDocument} />
+    <RouteWithSidebar exact path={Routes.InspectDocument1.path} component={InspectDocument1} />
 
     {/* view pdf */}
     <RouteWithSidebar exact path={Routes.viewPDF.path} component={viewPDF} />
