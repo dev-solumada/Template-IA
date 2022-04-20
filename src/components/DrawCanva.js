@@ -41,21 +41,17 @@ export default function DrawCanva (){
     useEffect(()=>{
         canvaRef.current.width = pictureRef.current.naturalWidth
         canvaRef.current.height = pictureRef.current.height
-
-        const canvas = document.getElementById("canvas")
-        const context = canvas.getContext("2d")
-        const roughtCanvas = rough.canvas(canvas)
-        const docPic = document.getElementById("docPic")
-
-        context.clearRect(0,0,canvas.width,canvas.height)
-        context.drawImage(docPic,0,0);
     },[pictureRef])
 
     //On init : 
     // @init canva position
     // @add event listener
     useEffect(()=>{
-        
+        const canvas = document.getElementById("canvas")
+        const context = canvas.getContext("2d")
+        context.clearRect(0,0,canvas.width,canvas.height)
+        const docPic = document.getElementById("docPic")
+        context.drawImage(docPic,0,0);
 
         let X = getItemPosition(canvaRef)['posX']
         let Y = getItemPosition(canvaRef)['posY']
@@ -133,6 +129,7 @@ export default function DrawCanva (){
                 id="canvas" 
                 style={{
                     border:'solid 0.5px grey',
+                    backgroundImage : "url('./sample_doc.png')"
                 }} 
                 width={canvaWidth} 
                 height={canvaHeight}
