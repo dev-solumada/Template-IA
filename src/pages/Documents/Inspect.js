@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faBoxOpen, faCartArrowDown, faChartPie, faChevronDown, faClipboard, faCommentDots, faFileAlt, faPlus, faRocket, faStore } from '@fortawesome/free-solid-svg-icons';
 import { Col, Row, Button, Container, Dropdown, Form, ButtonGroup, Breadcrumb, InputGroup } from '@themesberg/react-bootstrap';
-// import { FormUpdateDocument } from "../../components/Form-UpdateDocument"
+import { InspectDocumentView } from "../../components/InspectDocument";
 
 const InspectDocument = () => {
     return (
@@ -14,13 +14,10 @@ const InspectDocument = () => {
                         <Breadcrumb.Item>Account</Breadcrumb.Item>
                         <Breadcrumb.Item active>Add Document</Breadcrumb.Item>
                     </Breadcrumb>
-                    <h4>Inspect document</h4>
                 </div>
             </div>
-
-            {/* <Container className="px-0">
-                <FormUpdateDocument />
-            </Container> */}
+            <h4>Inspect document</h4>
+            <InspectDocumentView />
 
         </>
     );
