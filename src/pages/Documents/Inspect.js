@@ -3,9 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faSave ,faBoxOpen, faCartArrowDown, faChartPie, faChevronDown, faClipboard, faCommentDots, faFileAlt, faPlus, faRocket, faStore } from '@fortawesome/free-solid-svg-icons';
 import { Col, Row, Button, Container, Dropdown, Form, ButtonGroup, Breadcrumb, InputGroup } from '@themesberg/react-bootstrap';
 // import { FormUpdateDocument } from "../../components/Form-UpdateDocument"
-import {TableInspect} from '../../components/TableInspect'
-import {DocumentInspect} from '../../components/DocumentInspect'
-import DrawCanva from '../../components/DrawCanva'
+import {TableInspect} from '../../components/TableInspect';
+import {DocumentInspect} from '../../components/DocumentInspect';
+import DrawCanva from '../../components/DrawCanva';
+import { InspectDocumentTable } from "../../components/InspectDocTable";
+
 const InspectDocument = () => {
     return (
         <>
@@ -20,14 +22,39 @@ const InspectDocument = () => {
                 </div>
             </div>
             
-            <div className="d-flex flex-wrap flex-md-nowrap">
+            {/* <div className="d-flex flex-wrap flex-md-nowrap">
                 <div className="d-block w-50">
-                    <DrawCanva/>
-                    {/*<DocumentInspect />*/}
+                    <DrawCanva />
+                    <DocumentInspect />
                 </div>
                 <div className="d-block">
                     <TableInspect />
                 </div>
+            </div> */}
+
+            <div border="light">
+                <Row className="d-flex d-flex-inline justify-con" style={{height: 'auto'}}>
+                    <Col className="p-3 h-100 bg-white" sm={12} md={12} lg={12} xl={6} >
+                        <DocumentInspect />
+                    </Col>
+                    <Col className="h-100 p-3 bg-white" sm={12} md={12} lg={12} xl={6} >
+                        <div className="d-flex m-2 d-inline-flex ">
+                            <div className="m-2">
+                                <Button variant="primary">
+                                    <FontAwesomeIcon icon={faPlus} />
+                                    <span> Annoter</span>
+                                </Button>
+                            </div>
+                            <div className="m-2">
+                                <Button variant="primary">
+                                    <FontAwesomeIcon icon={faSave} />
+                                    <span> Save</span>
+                                </Button>
+                            </div>
+                        </div>
+                        <InspectDocumentTable />
+                    </Col>
+                </Row>
             </div>
 
             {/* <Container className="px-0">
