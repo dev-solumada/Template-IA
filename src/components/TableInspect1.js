@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus,faSave } from "@fortawesome/free-solid-svg-icons";
-import { TransactionsTable } from "../components/Tables";
+import { TransactionsTable } from "./Tables";
 import { Button, Table} from '@themesberg/react-bootstrap';
 //import {Table} from '@react-bootstrap/Table'
 
