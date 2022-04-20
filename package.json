@@ -59,6 +59,7 @@
     "react-scripts": "3.4.3",
     "react-table": "^7.7.0",
     "react-transition-group": "^4.4.1",
+    "roughjs": "^4.5.2",
     "simplebar-react": "^2.3.0"
   },
   "scripts": {

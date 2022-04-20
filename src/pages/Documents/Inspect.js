@@ -5,7 +5,7 @@ import { Col, Row, Button, Container, Dropdown, Form, ButtonGroup, Breadcrumb, I
 // import { FormUpdateDocument } from "../../components/Form-UpdateDocument"
 import {TableInspect} from '../../components/TableInspect'
 import {DocumentInspect} from '../../components/DocumentInspect'
-
+import DrawCanva from '../../components/DrawCanva'
 const InspectDocument = () => {
     return (
         <>
@@ -22,7 +22,8 @@ const InspectDocument = () => {
             
             <div className="d-flex flex-wrap flex-md-nowrap">
                 <div className="d-block w-50">
-                    <DocumentInspect/>
+                    <DrawCanva/>
+                    {/*<DocumentInspect />*/}
                 </div>
                 <div className="d-block">
                     <TableInspect />
