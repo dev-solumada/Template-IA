@@ -41,7 +41,9 @@ export const Routes = {
 
     //inspect
     InspectDocument: { path: "/document/inspect" },
-    InspectDocument_h: { path: "/document/inspect_h" },
+    //inspect
+    InspectDocument1: { path: "/document/inspect1" },
+
     viewPDF: { path: "/document/pdf" },
 
     // docs

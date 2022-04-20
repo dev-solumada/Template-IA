@@ -1,14 +1,14 @@
 import React from "react";
-
+import img from "../assets/img/optimum/sample_doc.png"
 import {Image} from "@themesberg/react-bootstrap"
 const docPicture = require ("../assets/img/optimum/Capture.jpg")
 
 export function DocumentInspect() {
     return(
-        <>
-            <div>
-                <Image scr={docPicture} width={20} height={20} alt="document img"/>
-            </div>
-        </>
+        <div>
+            {/*<Image scr={docPicture} alt="document img"/>*/}
+
+            <img src={img}/>   
+        </div>
     )
 }

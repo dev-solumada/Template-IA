@@ -19,7 +19,7 @@ const ViewClient = () => {
                         <Breadcrumb.Item>
                             <Link to="/client">Client</Link>
                         </Breadcrumb.Item>
-                        <Breadcrumb.Item>Detail</Breadcrumb.Item>
+                        <Breadcrumb.Item active>Detail</Breadcrumb.Item>
                     </Breadcrumb>
                     <h4>Clients</h4>
                 </div>
@@ -29,6 +29,13 @@ const ViewClient = () => {
                     <h4 className="text-center"> Client Detail</h4>
                 </Card.Header>
                 <Card.Body>
+                    <Row>
+                        <Col className="d-flex justify-content-end">
+                             <Link to="/client/history">
+                                <Button variant="primary">History</Button>
+                            </Link>
+                        </Col>
+                    </Row>
                     <Form>
                         <Row>
                             <Col md={12} className="mb-3">
@@ -73,14 +80,19 @@ const ViewClient = () => {
                             <div className="row">
                                 <div class="mb-3 mx-auto row d-fex d-flex-inline justify-content-around">
                                     <div className="col-5 col-sm-5 col-md-5 col-xl-5 ml-2">
-                                        <div className="row d-flex justify-content-center">
-                                            <Button variant="success">Edit</Button>
-                                        </div>
+                                        <Link to="/client/update">
+                                            <div className="row d-flex justify-content-center">
+                                                <Button variant="success">Edit</Button>
+                                            </div>
+                                        </Link>
+
                                     </div>
                                     <div className="col-5 col-sm-5 col-md-5 col-xl-5">
-                                        <div className="row d-flex justify-content-center">
-                                            <Button variant="danger">Delete</Button>
-                                        </div>
+                                        <Link to="/client">
+                                            <div className="row d-flex justify-content-center">
+                                                <Button variant="danger">Delete</Button>
+                                            </div>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
