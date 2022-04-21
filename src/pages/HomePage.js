@@ -57,7 +57,6 @@ import AddClient from "./Clients/AddClient";
 import UpdateClient from "./Clients/UpdateClient";
 import HistoryClient from "./Clients/HistoryClient";
 import ViewClient from "./Clients/ViewClient";
-import PDFviewer from "./Clients/PDFviewer";
 
 import Documents from "./Documents/Documents";
 import AddDocument from "./Documents/AddDocument";
@@ -175,7 +174,6 @@ export default () => (
     <RouteWithSidebar exact path={Routes.UpdateClient.path} component={UpdateClient} />
     <RouteWithSidebar exact path={Routes.HistoryClient.path} component={HistoryClient} />
     <RouteWithSidebar exact path={Routes.ViewClient.path} component={ViewClient} />
-    <RouteWithSidebar exact path={Routes.PDFviewer.path} component={PDFviewer} />
 
 
 

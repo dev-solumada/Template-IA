@@ -25,7 +25,6 @@ export const Routes = {
     UpdateClient: { path: "/client/update" },
     ViewClient: { path: "/client/detail" },
     HistoryClient: { path: "/client/history" },
-    PDFviewer: {path: "/client/viewPDF" },
 
     //Document
     Document: { path: "/document" },
