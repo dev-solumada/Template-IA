@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import rough from 'roughjs/bundled/rough.esm'
 
 // get doc dimension
-const doc = require('../assets/img/optimum/sample_doc.PNG')
+const doc = require('../assets/img/optimum/sample_doc.png')
 const generator = rough.generator()
 
 
@@ -131,7 +131,7 @@ export default function DrawCanva (){
                     border:'solid 0.5px grey',
                     backgroundImage : "url('./sample_doc.png')"
                 }} 
-                width={canvaWidth} 
+                width={canvaWidth}
                 height={canvaHeight}
                 onMouseDown={handleMouseDown}
                 onMouseMove={handleMouseMove}

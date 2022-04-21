@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../assets/img/optimum/sample_doc.PNG"
+import img from "../assets/img/optimum/sample_doc.png"
 import {Image} from "@themesberg/react-bootstrap"
 const docPicture = require ("../assets/img/optimum/Capture.jpg")
 
