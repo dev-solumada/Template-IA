@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import rough from 'roughjs/bundled/rough.esm'
 
 // get doc dimension
-const doc = require('../assets/img/optimum/sample_doc.png')
+const doc = require('../assets/img/optimum/sample_doc.PNG')
 const generator = rough.generator()
 
 
