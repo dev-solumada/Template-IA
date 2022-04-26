@@ -1,10 +1,10 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faSave ,faBoxOpen, faCartArrowDown, faChartPie, faChevronDown, faClipboard, faCommentDots, faFileAlt, faPlus, faRocket, faStore } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faSave, faBoxOpen, faCartArrowDown, faChartPie, faChevronDown, faClipboard, faCommentDots, faFileAlt, faPlus, faRocket, faStore } from '@fortawesome/free-solid-svg-icons';
 import { Col, Row, Button, Container, Dropdown, Form, ButtonGroup, Breadcrumb, InputGroup } from '@themesberg/react-bootstrap';
 // import { FormUpdateDocument } from "../../components/Form-UpdateDocument"
-import {TableInspect} from '../../components/TableInspect'
-import {DocumentInspect} from '../../components/DocumentInspect'
+import { TableInspect } from '../../components/TableInspect'
+import DocumentInspect from '../../components/DocumentInspect'
 
 const InspectDocument = () => {
     return (
@@ -19,13 +19,15 @@ const InspectDocument = () => {
                     <h4>Inspect document</h4>
                 </div>
             </div>
-            
+
             <div className="d-flex flex-wrap flex-md-nowrap">
                 <div className="d-block w-50">
-                    <DocumentInspect/>
+                    <DocumentInspect />
+                    1
                 </div>
                 <div className="d-block">
                     <TableInspect />
+                    2
                 </div>
             </div>
 
