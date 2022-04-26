@@ -16,17 +16,6 @@ import {
 
 import { ScreenCapture } from 'react-screen-capture';
 
-function arrayReplace(arr, index, item) {
-    return [
-        ...arr.slice(0, index),
-        ...(Array.isArray(item) ? item : [item]),
-        ...arr.slice(index + 1),
-    ];
-}
-
-const RectShape = wrapShape(({ width, height }) => (
-    <rect width={width} height={height} fill="rgba(0,0,255,0.5)" />
-));
 
 let idIterator = 1;
 class DocumentInspect extends React.Component {
@@ -51,115 +40,44 @@ class DocumentInspect extends React.Component {
     render() {
         const { screenCapture } = this.state;
 
-        // const [items, setItems] = useState([
-        //     // { id: '1', x: 20, y: 120, width: 145, height: 140 },
-        //     // { id: '2', x: 15, y: 0, width: 150, height: 95 },
-        // ]);
-        // let [file, setFile] = useState(null);
-
-        // const [{ vectorHeight, vectorWidth }, setVectorDimensions] = useState({
-        //     vectorHeight: 0,
-        //     vectorWidth: 0,
-        // });
-
-        // const uploadIconStyle = {
-        //     display: 'inline',
-        //     width: 500,
-        //     height: 500,
-        // };
-
-        // const fileChangedHandler = (event) => {
-        //     let file = event.target.files[0];
-        //     let reader = new FileReader();
-        //     console.log(file);
-        //     reader.onload = function (e) {
-        //         setFile(e.target.result);
-        //     };
-        //     reader.readAsDataURL(event.target.files[0]);
-        // };
 
         return (
-            <>
-                <ScreenCapture onEndCapture={this.handleScreenCapture}>
-                    {({ onStartCapture }) => (
-                        <div>
-                            <button onClick={onStartCapture}>Capture</button>
+            <ScreenCapture onEndCapture={this.handleScreenCapture}>
+                {({ onStartCapture }) => (
+                    <div>
+                        <button onClick={onStartCapture}>Capture</button>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+                            distinctio exercitationem a tempore delectus ducimus necessitatibus
+                            dolor voluptatum aut est quaerat aspernatur, vero quod aperiam odio.
+                            Exercitationem distinctio in voluptates?
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut molestiae
+                            deserunt voluptas, labore a expedita error eligendi sunt fugit, nesciunt
+                            ullam corrupti quas natus, officia rerum? Officia cum amet quidem.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, iusto
+                            repellat quae quos in rerum sunt obcaecati provident placeat hic saepe
+                            possimus eaque repellendus consequuntur quisquam nihil, sit ullam
+                            ratione.
+                        </p>
+                        <center>
+                            <img src={screenCapture} alt='react-screen-capture' />
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-                                distinctio exercitationem a tempore delectus ducimus necessitatibus
-                                dolor voluptatum aut est quaerat aspernatur, vero quod aperiam odio.
-                                Exercitationem distinctio in voluptates?
+                                {screenCapture && <button onClick={this.handleSave}>Download</button>}
                             </p>
-                            <p>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut molestiae
-                                deserunt voluptas, labore a expedita error eligendi sunt fugit, nesciunt
-                                ullam corrupti quas natus, officia rerum? Officia cum amet quidem.
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, iusto
-                                repellat quae quos in rerum sunt obcaecati provident placeat hic saepe
-                                possimus eaque repellendus consequuntur quisquam nihil, sit ullam
-                                ratione.
-                            </p>
-                            <center>
-                                <img src={screenCapture} alt='react-screen-capture' />
-                                <p>
-                                    {screenCapture && <button onClick={this.handleSave}>Download</button>}
-                                </p>
-                            </center>
-                        </div>
-                    )}
-                </ScreenCapture>
-                {/* <div>
-                    <div className="d-flex m-2 d-inline-flex ">
-                        <div className="mx-2">
-                            <Button variant="primary">
-                                <FontAwesomeIcon icon={faPlus} />
-                                <span> Annoter</span>
-                            </Button>
-                        </div>
-                        <div className="mx-2">
-                            <Button variant="primary">
-                                <FontAwesomeIcon icon={faSave} />
-                                <span> Save</span>
-                            </Button>
-                        </div>
+                        </center>
                     </div>
-
-                    <img src={img} />
-                </div> */}
-            </>
+                )}
+            </ScreenCapture>
         );
     }
 };
 
 export default DocumentInspect;
 
-
-
-// export function DocumentInspect() {
-//     return (
-//         <div>
-//             {/*<Image scr={docPicture} alt="document img"/>*/}
-//             <div className="d-flex m-2 d-inline-flex ">
-//                 <div className="mx-2">
-//                     <Button variant="primary">
-//                         <FontAwesomeIcon icon={faPlus} />
-//                         <span> Annoter</span>
-//                     </Button>
-//                 </div>
-//                 <div className="mx-2">
-//                     <Button variant="primary">
-//                         <FontAwesomeIcon icon={faSave} />
-//                         <span> Save</span>
-//                     </Button>
-//                 </div>
-//             </div>
-
-//             <img src={img} />
-//         </div>
-//     )
-// }
 
 
 
