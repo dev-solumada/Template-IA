@@ -1,11 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faSave ,faBoxOpen, faCartArrowDown, faChartPie, faChevronDown, faClipboard, faCommentDots, faFileAlt, faPlus, faRocket, faStore } from '@fortawesome/free-solid-svg-icons';
-import { Col, Row, Button,Card, Container, Dropdown, Form, ButtonGroup, Breadcrumb, InputGroup } from '@themesberg/react-bootstrap';
-// import { FormUpdateDocument } from "../../components/Form-UpdateDocument"
-import {TableInspect} from '../../components/TableInspect';
-import {DocumentInspect} from '../../components/DocumentInspect1';
-import DrawCanva from '../../components/DrawCanva';
+import { faHome, faSave, faBoxOpen, faCartArrowDown, faChartPie, faChevronDown, faClipboard, faCommentDots, faFileAlt, faPlus, faRocket, faStore } from '@fortawesome/free-solid-svg-icons';
+import { Col, Row, Button, Card, Container, Dropdown, Form, ButtonGroup, Breadcrumb, InputGroup } from '@themesberg/react-bootstrap';
+
+import DocumentInspect from '../../components/DocumentInspect1';
 import { InspectDocumentTable } from "../../components/InspectDocTable";
 
 const InspectDocument = () => {
@@ -21,9 +19,9 @@ const InspectDocument = () => {
                     <h4>Inspect document</h4>
                 </div>
             </div>
-            
+
             <div border="light">
-                <Row className="d-flex d-flex-inline mb-3" style={{height: 'auto'}}>
+                <Row className="d-flex d-flex-inline mb-3" style={{ height: 'auto' }}>
                     <Col sm={12} md={12} lg={12} xl={6} >
                         <Card className="p-3 h-100 bg-white">
                             <DocumentInspect />
