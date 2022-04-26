@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faSave, faBoxOpen, faCartArrowDown, faChartPie, faChevronDown, faClipboard, faCommentDots, faFileAlt, faPlus, faRocket, faStore } from '@fortawesome/free-solid-svg-icons';
 import { Col, Row, Button, Card, Container, Dropdown, Form, ButtonGroup, Breadcrumb, InputGroup } from '@themesberg/react-bootstrap';
 
-import DocumentInspect from '../../components/DocumentInspect1';
+import DocumentInspect from '../../components/DocumentInspect2';
 import { InspectDocumentTable } from "../../components/InspectDocTable";
 
 const InspectDocument = () => {
